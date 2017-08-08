@@ -1,0 +1,8 @@
+<jboss-web>
+	<!-- <security-domain>java:/jaas/simpleWebAuthenticationPolicy</security-domain> -->
+	<!-- <security-domain>autenticacion_AD</security-domain> -->
+	<security-domain>autenticacion_BD</security-domain>
+	<!-- <security-domain>java:/jaas/autenticacion_AD</security-domain> -->
+	<!-- <security-domain>java:/jaas/autenticacion_BD</security-domain> -->
+	<!-- <security-domain>java:/jaas/autenticacion_ADyBD</security-domain> -->
+</jboss-web>  

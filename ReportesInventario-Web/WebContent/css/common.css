@@ -1,0 +1,19 @@
+
+/*
+ * For editors, when an invalid value is input
+ */
+.invalid {
+
+    color : red;
+}
+
+
+div.yui-log {
+
+    position: absolute;
+    bottom : 0px;
+    right: 0px;
+    z-index: 40000;
+}
+
+

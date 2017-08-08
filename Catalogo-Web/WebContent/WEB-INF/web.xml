@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>Catalogo-Web</display-name>
+	<servlet>
+		<servlet-name>irAUsuarioPublicoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.servlets.IrAUsuarioPublicoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>irAUsuarioRegistradoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.servlets.IrAUsuarioRegistradoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>irARegistrarEspecieCatalogoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.servlets.IrARegistrarEspecieCatalogoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>irAConsultarEspecieServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.servlets.IrAConsultarEspecieServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>consultarEspecieCatalogoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.servlets.ConsultarEspecieCatalogoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>irAUsuarioPublicoServlet</servlet-name>
+		<url-pattern>/irAUsuarioPublicoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>irAUsuarioRegistradoServlet</servlet-name>
+		<url-pattern>/irAUsuarioRegistradoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>irARegistrarEspecieCatalogoServlet</servlet-name>
+		<url-pattern>/irARegistrarEspecieCatalogoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>irAConsultarEspecieServlet</servlet-name>
+		<url-pattern>/irAConsultarEspecieServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>consultarEspecieCatalogoServlet</servlet-name>
+		<url-pattern>/consultarEspecieCatalogoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,40 @@
+
+.yui-skin-sam table.feature-datasets-wrapper-template {
+
+    border-collapse : collapse;
+    border : 1px solid #7f7f7f;
+    empty-cells : show;
+}
+
+
+.yui-skin-sam table.feature-datasets-wrapper-template thead tr th {
+
+    padding : 4px 10px;
+}
+
+
+.yui-skin-sam table.feature-datasets-wrapper-template tbody tr td {
+    
+    padding : 4px 10px;
+}
+
+
+.yui-skin-sam table.feature-datasets-wrapper-template tbody tr td.actions {
+    
+    white-space : nowrap;
+    text-align : center;
+}
+
+
+.yui-skin-sam table.feature-datasets-wrapper-template tbody tr td.geometry {
+    
+    text-align : center;
+}
+
+
+
+
+
+
+
+

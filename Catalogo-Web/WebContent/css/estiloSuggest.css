@@ -1,0 +1,123 @@
+#sugDivision {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCFF;
+	width: 252px;
+}
+
+#sugDivisiondiv {
+	padding: 1px;
+	display: block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sugDivision div.select {
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+
+#sugDivision div.over {
+	background-color: #99CCFF;
+}
+
+/*--------------------------*/
+#sugClase {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCFF;
+	width: 252px;
+}
+
+#sugClase div {
+	padding: 1px;
+	display: block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sugClase div.select {
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+
+#sugClase div.over {
+	background-color: #99CCFF;
+}
+
+/*--------------------------*/
+#sugOrden {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCFF;
+	width: 252px;
+}
+
+#sugOrden div {
+	padding: 1px;
+	display: block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sugOrden div.select {
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+
+#sugOrden div.over {
+	background-color: #99CCFF;
+}
+
+/*--------------------------*/
+#sugFamilia {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCFF;
+	width: 252px;
+}
+
+#sugFamilia div {
+	padding: 1px;
+	display: block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sugFamilia div.select {
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+
+#sugFamilia div.over {
+	background-color: #99CCFF;
+}
+
+/*--------------------------*/
+#sugGenero {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCFF;
+	width: 252px;
+}
+
+#sugGenero div {
+	padding: 1px;
+	display: block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sugGenero div.select {
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+
+#sugGenero div.over {
+	background-color: #99CCFF;
+}

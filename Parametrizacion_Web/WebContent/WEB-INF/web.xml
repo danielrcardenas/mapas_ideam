@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Parametrizacion_Web</display-name>
+  <!-- SERVLETS RUTAS DE PARAMETROS -->
+  	<servlet>
+		<servlet-name>editarParametrosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.parametros.servlets.EditarParametroServlet</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+		<servlet-name>editarParametrosServlet</servlet-name>
+		<url-pattern>/editarParametrosServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

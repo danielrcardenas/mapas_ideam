@@ -1,0 +1,21 @@
+
+.yui-skin-sam div.eaim-dataset-detail-panel-frame {
+
+    height : 400px;
+    width : 600px;
+    overflow: auto;
+}
+
+
+.yui-skin-sam div.eaim-dataset-detail-panel-frame table {
+
+    border-collapse : collapse;
+    width: 100%;
+}
+
+
+.yui-skin-sam div.eaim-dataset-detail-panel-frame table tbody tr.kvp-odd {
+
+    background-color : white;
+}
+

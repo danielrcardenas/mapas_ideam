@@ -1,0 +1,11 @@
+
+div.color-editor span span button em {
+
+    border      : 1px solid black;
+    display     : block;
+    width       : 1em;
+    height      : 1em;
+    overflow    : hidden;
+    text-indent : 1em;
+    white-space : nowrap;
+}

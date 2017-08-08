@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_79"/>
+	<classpathentry kind="lib" path="iText-5.0.5.jar"/>
+	<classpathentry kind="lib" path="poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="poi-examples-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="poi-excelant-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="poi-scratchpad-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="ojdbc6.jar"/>
+	<classpathentry kind="lib" path="xbean.jar"/>
+	<classpathentry kind="lib" path="dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="javax.mail.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,106 @@
+
+
+div.wps-panel div.process-runs {
+    
+    overflow-y: auto;
+    height: 200px;
+}
+
+
+div.wps-panel div.process-runs div.process-run {
+
+    border: 1px solid white;
+}
+
+
+div.wps-panel div.process-runs div.process-run div.toggler {
+
+    width: 11px;
+    height: 11px;
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    backgrousd-repeat: none;
+    background-position: 0 -1050px;
+}
+
+
+div.wps-panel div.process-runs div.collapsed-process-run div.toggler {
+
+    background-position: 0 -950px;
+}
+
+
+div.wps-panel div.process-runs div.collapsed-process-run table tr.collapsable-row {
+
+    display : none;
+}
+
+
+div.wps-panel div.process-runs div.selected-run {
+
+    background-color: #f7f9ff;
+    border: 1px solid #e7e9ff;
+}
+
+
+div.wps-panel div.process-runs div.process-run td.progressbar-holder {
+
+    padding: 0px;
+    border: 1px solid #bbbbcc;
+}
+
+
+div.wps-panel div.process-runs div.process-run td span.progress-text-holder {
+
+    font-style: italic;
+}
+
+
+div.wps-panel div.process-runs div.process-run td.progressbar-holder div.progressbar {
+
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    backgrousd-repeat: repeat-x;
+    background-position: 0 -1925px;
+    height: 5px;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+
+div.wps-panel div.process-runs div.process-run td.status-icon-holder img {
+
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+}
+
+
+div.wps-panel .ios-panel {
+
+    margin: 3px;
+}
+
+
+div.wps-panel .hidden {
+
+    display: none;
+}
+
+
+div.wps-panel div.buttons,
+div.wps-panel div.select-process div.buttons,
+div.wps-panel div.select-process div.tree-buttons {
+
+    margin-top: 9px;
+    text-align: right;
+}
+
+
+div.wps-panel span.description-icon {
+
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+    background-position: 0px -300px;
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+}

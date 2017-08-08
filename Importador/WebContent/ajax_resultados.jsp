@@ -1,0 +1,1 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%><%! String r = ""; %><% if (request.getAttribute("retorno") != null) { out.print(request.getAttribute("retorno").toString()); } %>

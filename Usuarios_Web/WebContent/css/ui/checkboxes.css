@@ -1,0 +1,35 @@
+
+/* 
+
+Checkboxes 
+Stolen from: http://blog.davglass.com/files/yui/buttonskins/
+
+*/ 
+
+
+.yui-skin-sam .yui-checkbox-button { 
+
+    background-image: url( ../../../images/api/ui/checkboxes/unchecked_box.gif ); 
+    background-position: 0 3px; 
+    background-repeat: no-repeat; 
+    border: none; 
+} 
+
+
+.yui-skin-sam .yui-checkbox-button-checked { 
+
+    background-image: url( ../../../images/api/ui/checkboxes/checked_box.gif ); 
+} 
+
+
+.yui-skin-sam .yui-checkbox-button-checked button { 
+
+    color: #000; 
+} 
+
+
+.yui-skin-sam .yui-checkbox-button .first-child { 
+
+    border: none; 
+    padding-left: 5px; 
+} 

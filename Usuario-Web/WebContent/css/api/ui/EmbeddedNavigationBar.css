@@ -1,0 +1,161 @@
+/*
+ * Copyright 2005- by IONIC Software S.A.,
+ * 18 Av Wallonie, 4460 Grace-Hollogne, Belgium.
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information
+ * of IONIC Software S.A.("Confidential Information").
+ * You shall not disclose such Confidential Information and shall use
+ * it only in accordance with the terms of the license agreement
+ * you entered into with IONIC Software.
+ */
+
+
+/*
+ * CSS for navigation controls embedded in a map.
+ */
+
+div.embedded-bar {
+
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+
+/*
+ * Panning controls
+ */
+
+div.embedded-bar div.pan {
+
+    position: relative;
+    width: 54px;
+    height: 54px;
+    z-index: 210;
+    background-image: url ("../../../../../../images/tilapia-base-sprite2.png");
+}
+
+
+div.embedded-bar div.pan div {
+
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+div.embedded-bar div.pan div.pan-top {
+
+    top: 0;
+    left: 18px;
+}
+
+
+div.embedded-bar div.pan div.pan-bottom {
+
+    bottom: 0;
+    left: 18px;
+}
+
+
+div.embedded-bar div.pan div.pan-left {
+
+    left: 0;
+    top: 18px;
+}
+
+
+div.embedded-bar div.pan div.pan-right {
+
+    right: 0;
+    top: 18px;
+}
+
+
+/*
+ * Scale with slider and zoom in/out
+ */
+
+div.embedded-bar div.scale {
+
+    position: relative;
+    width: 18px;
+    z-index: 210;
+}
+
+
+div.embedded-bar div.scale
+{
+        left: 18px;
+        position: absolute;
+}
+
+
+div.embedded-bar div.scale div {
+
+    position: relative;
+}
+
+
+div.embedded-bar div.zoom-in {
+    width: 18px;
+    height: 18px;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    background-image: url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0 -2050px;
+    background-repeat: no-repeat;
+}
+
+
+div.embedded-bar div.zoom-out {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    background-image: url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0 -2075px;
+    background-repeat: no-repeat;
+}
+
+
+div.embedded-bar div.slider {
+    background-image: url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 5px -2100px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 152px;
+}
+
+
+div.embedded-bar div.slider div {
+    background-image: url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0px -2275px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 7px;
+    left: 0px;
+    position: absolute;
+}
+
+
+
+/**
+ * The "hint" component 
+ */
+div.scale-hint {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    border: 1px solid black;
+    background-color: #f7f3f7;
+    z-index: 2000;
+}
+
+
+div.scale-hint div {
+
+    margin: 1px;
+}

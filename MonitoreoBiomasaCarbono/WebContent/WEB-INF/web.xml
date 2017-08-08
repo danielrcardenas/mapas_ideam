@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>MonitoreoBosquesCarbono</display-name>
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+		<init-param>
+			<param-name>logLevel</param-name>
+			<param-value>WARN</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>RegistrarNoticiaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.CrearNoticiaEventoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>registrarAccesoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.RegistrarAccesoServlet</servlet-class> 
+	</servlet> 
+	<servlet>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.LimpiarSesionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.BorrarArchivosServlet</servlet-class>  
+	</servlet>
+	<servlet>
+		<servlet-name>descargaDocumentosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlet.DescargaDocumentosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrarNoticiaServlet</servlet-name>
+		<url-pattern>/registrarNoticiaEvento</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/idioma</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>registrarAccesoServlet</servlet-name> 
+		<url-pattern>/registrarAccesoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<url-pattern>/limpiarSesionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<url-pattern>/borrarArchivosServlet</url-pattern> 
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>descargaDocumentosServlet</servlet-name>
+		<url-pattern>/descargaDocumentosServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!--Restricciones de seguridad -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Registered User Authentication
+				Policy</web-resource-name>
+			<url-pattern>/reg/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>USUARIO_PUBLICO_REGISTRADO</role-name>
+			<role-name>ADMINISTRADOR_TEMATICO</role-name>
+			<role-name>COORDINADOR_TEMATICO_IDEAM</role-name>
+			<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name>
+			<role-name>Gestor_inventarios_forestales_IDEAM</role-name>
+			<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name>
+			<role-name>ADMINISTRADOR_GENERAL</role-name>
+			<role-name>Coordinador_general_REDD</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<!--#Form-Based Authentication -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Form-Based Authentication
+			Area</realm-name>
+		<form-login-config>
+			<form-login-page>/indexFrames.jsp</form-login-page>
+			<form-error-page>/indexFrames2.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	<!--#Roles -->
+	<security-role>
+		<description>Usuario Publico</description>
+		<role-name>USUARIO_PUBLICO_REGISTRADO</role-name>
+	</security-role>
+	<security-role>
+		<description>Administrador Tematico</description>
+		<role-name>ADMINISTRADOR_TEMATICO</role-name>
+	</security-role>
+	<security-role>
+		<description>COORDINADOR_TEMATICO_IDEAM</description>
+		<role-name>COORDINADOR_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_TEMATICO_IDEAM</description>
+		<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>Gestor_inventarios_forestales_IDEAM</description>
+		<role-name>Gestor_inventarios_forestales_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_CONSULTA_IDEAM</description>
+		<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>ADMINISTRADOR_GENERAL</description>
+		<role-name>ADMINISTRADOR_GENERAL</role-name>
+	</security-role>
+	<security-role>
+		<description>Coordinador_general_REDD</description>
+		<role-name>Coordinador_general_REDD</role-name>
+	</security-role>
+	
+	<error-page>
+    <!-- Uncaught exception -->
+    <error-code>500</error-code>
+    <location>/home.jsp</location>
+</error-page>	
+	
+</web-app>

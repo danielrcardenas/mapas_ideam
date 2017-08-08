@@ -1,0 +1,12 @@
+
+.marker-feature-renderer
+{
+    border: 2px solid gray;
+    background: white;   
+}
+
+
+.marker-feature-renderer span
+{
+    margin: 6px;
+}

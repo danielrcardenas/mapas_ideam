@@ -1,0 +1,54 @@
+
+@import url('configurators/CommonConfigurator.css');
+@import url('configurators/StyleConfigurator.css');
+@import url('configurators/TilingConfigurator.css');
+
+
+
+.configure-layer-popup {
+
+        width: 400px;
+}
+
+
+.configure-layer-popup .tab-view {
+
+        margin: 6px;
+}
+
+
+.configure-layer-popup div.close-button {
+
+        margin-top: 6px;
+        margin-right: 6px;
+        text-align: right;
+}
+
+
+.configure-layer-popup .tab-view span.label {
+
+        margin-left: 12px;
+        margin-right: 12px;
+        font-weight: bold;
+}
+
+
+.configure-layer-popup .tab-view div.title {
+
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-weight: bold;
+        font-size: 120%;
+}
+
+
+.configure-layer-popup .tab-view input {
+
+        border: 1px solid #a7b3ff;
+}
+
+
+.configure-layer-popup .tab-view select {
+
+        border: 1px solid #a7b3ff;
+}

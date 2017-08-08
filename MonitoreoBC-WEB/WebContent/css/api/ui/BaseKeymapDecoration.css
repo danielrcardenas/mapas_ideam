@@ -1,0 +1,61 @@
+
+/* CSS relative to the KeyMapDecoration objects */
+
+/* By default the decorator is on the top-left corner of the map.
+   Modify the 'top', 'left', 'bottom' and 'right' properties to change this behaviour. */
+.keyMapDecoration
+{
+  border: 1px solid #3169a2;
+  opacity: 0.95;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  }
+
+
+.keyMapDecorationMinimized
+{
+  width: 16px;
+  height: 16px;
+  }
+
+
+
+.keyMapToggleButton
+{ 
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  }
+
+
+
+.keyMapToggleButtonToMin
+{ 
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 -1975px;
+    top: 3px;
+    right: 3px;
+    font-size:5px;
+    height:14px;
+    width:14px;
+}
+
+
+.keyMapToggleButtonToMax 
+{ 
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 -2000px;
+    top: 0px;
+    right: 0px;
+    font-size:5px;
+    height:14px;
+    width:14px;
+}
+
+.keyMapDecorationFullToolbar
+{ 
+  background-color: white;
+  }

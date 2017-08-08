@@ -1,0 +1,23 @@
+
+div.metadata {
+
+    background-color: white;
+}
+
+
+div.metadata div.selector-holder {
+
+    margin: 12px;
+}
+
+
+div.metadata iframe {
+
+    border-top: 1px solid gray;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    width: 700px;
+    height: 450px;
+}
+

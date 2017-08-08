@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>MonitoreoBosquesCarbono</display-name>
+
+	<welcome-file-list>
+		<welcome-file>/reg/indexLogOn.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- SERVLETS Monitoreo Biomasa Carbono -->
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.LimpiarSesionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<url-pattern>/limpiarSesionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.BorrarArchivosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/idioma</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<url-pattern>/borrarArchivosServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CargarDatosReportesServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.CargarDatosReportesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CargarDatosReportesServlet</servlet-name>
+		<url-pattern>/cargarDatosReportesServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DescargaEjemploAlertas</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.DescargaEjemploAlertas</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DescargaEjemploAlertas</servlet-name>
+		<url-pattern>/descargaEjemploAlertas</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<!-- SERVLETS Descarga -->
+  	<servlet>
+  		<servlet-name>generarReporteDescargasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.descarga.servlets.GenerarReporteDescargasServlet</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+		<servlet-name>generarReporteDescargasServlet</servlet-name>
+		<url-pattern>/generarReporteDescargasServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>generarReporteServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.descarga.servlets.GenerarReporteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>generarReporteServlet</servlet-name>
+		<url-pattern>/generarReporteServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- SERVLETS Parametrizacion -->
+	<servlet>
+		<servlet-name>editarParametrosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.parametrizacion.servlets.EditarParametroServlet</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+		<servlet-name>editarParametrosServlet</servlet-name>
+		<url-pattern>/editarParametrosServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- SERVLETS Proyectos -->
+	<servlet>
+    <servlet-name>redireccionServlet</servlet-name>
+    <servlet-class>co.gov.ideamredd.web.proyecto.servlets.RedireccionesServlet</servlet-class>
+  	</servlet>
+    <servlet>
+    <servlet-name>consultaReporteServlet</servlet-name>
+    <servlet-class>co.gov.ideamredd.web.proyecto.servlets.ConsultarReporteProyectoServlet</servlet-class>
+  	</servlet>
+  	<servlet>
+    <servlet-name>descargaProyectosServlet</servlet-name>
+    <servlet-class>co.gov.ideamredd.web.proyecto.servlets.DescargaProyectosServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    <servlet-name>redireccionServlet</servlet-name>
+    <url-pattern>/redireccion</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+    <servlet-name>consultaReporteServlet</servlet-name>
+    <url-pattern>/consultaReporte</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+    <servlet-name>descargaProyectosServlet</servlet-name>
+    <url-pattern>/descargaProyectosServlet</url-pattern>
+  	</servlet-mapping>
+  	
+<!--   	SERVLETS Reportes -->
+	<servlet>
+		<servlet-name>EliminarReporteServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.reportes.servlets.EliminarReporteServlet</servlet-class>
+	</servlet> 
+	<servlet-mapping>
+		<servlet-name>EliminarReporteServlet</servlet-name>
+		<url-pattern>/eliminarReporteServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ActualizarReporteServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.reportes.servlets.ActualizarReporteServlet</servlet-class>
+	</servlet> 
+	<servlet-mapping>
+		<servlet-name>ActualizarReporteServlet</servlet-name>
+		<url-pattern>/actualizarReporteServlet</url-pattern>
+	</servlet-mapping>
+  	
+  	
+<!--   	SERVLETS Reportes -->
+<!--   	<servlet> -->
+<!-- 		<servlet-name>consultarReporteServlet</servlet-name> -->
+<!-- 		<servlet-class>co.gov.ideamredd.web.reportes.servlets.ConsultarReporteServlet</servlet-class> -->
+<!-- 	</servlet>  -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>consultarReporteServlet</servlet-name> -->
+<!-- 		<url-pattern>/consultarReporteServlet</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	<servlet>
+		<servlet-name>descargaDocumentosReportesServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.reportes.servlets.DescargaDocumentosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaDocumentosReportesServlet</servlet-name>
+		<url-pattern>/descargaDocumentosReportesServlet</url-pattern> 
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>HomeReportesServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeReportesServlet</servlet-name>
+		<url-pattern>/idiomaServlet</url-pattern>
+	</servlet-mapping>
+	
+<!-- 	SERVLETS ALERTAS -->
+	<servlet>
+		<servlet-name>DescargaBoletinesAlertasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.DescargaBoletinesAlertasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DescargaBoletinesAlertasServlet</servlet-name>
+		<url-pattern>/descargaBoletinesAlertasServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DescargaImagenesAlertasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.DescargaImagenesAlertasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DescargaImagenesAlertasServlet</servlet-name>
+		<url-pattern>/descargaImagenesAlertasServlet</url-pattern>
+	</servlet-mapping>
+	
+<!-- 	SERVLETS Usuario -->
+	<servlet>
+		<servlet-name>actualizarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.ActualizarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>actualizarUsuarioServlet</servlet-name>
+		<url-pattern>/actualizarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>recordarClaveUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.RecordarClaveUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>recordarClaveUsuarioServlet</servlet-name>
+		<url-pattern>/recordarClaveUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registrarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.RegistrarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registrarUsuarioServlet</servlet-name>
+		<url-pattern>/registrarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>descargaLicenciaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.DescargaLicenciaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaLicenciaServlet</servlet-name>
+		<url-pattern>/descargaLicenciaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registrarAccesoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.RegistrarAccesoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registrarAccesoServlet</servlet-name>
+		<url-pattern>/registrarAccesoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>consultarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.ConsultarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarUsuarioServlet</servlet-name>
+		<url-pattern>/consultarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>activacionUsuarioServlet</servlet-name> -->
+<!-- 		<servlet-class>co.gov.ideamredd.web.usuario.servlets.ActivacionUsuarioServlet</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>activacionUsuarioServlet</servlet-name> -->
+<!-- 		<url-pattern>/activacionUsuarioServlet</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	<servlet>
+		<servlet-name>modificarRolUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.ModificarRolUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modificarRolUsuarioServlet</servlet-name>
+		<url-pattern>/modificarRolUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>consultarEstadisticasUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.ConsultarEstadisticasUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarEstadisticasUsuarioServlet</servlet-name>
+		<url-pattern>/consultarEstadisticasUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>descargaEstadisticasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.DescargaEstadisticasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaEstadisticasServlet</servlet-name>
+		<url-pattern>/descargaEstadisticasServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>descargaDocumentosServletUsuario</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.DescargaDocumentosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaDocumentosServletUsuario</servlet-name>
+		<url-pattern>/descargaDocumentosServletUsuario</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>borrarArchivosServletUsuario</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.usuario.servlets.BorrarArchivosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>borrarArchivosServletUsuario</servlet-name>
+		<url-pattern>/borrarArchivosServletUsuario</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- 	SERVLETS Administracion -->
+	<servlet>
+		<servlet-name>ModificarRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ModificarRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificarRolServlet</servlet-name>
+		<url-pattern>/modificarRol</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RegistrarRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.CrearRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrarRolServlet</servlet-name>
+		<url-pattern>/registrarRol</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.EliminarRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarRolServlet</servlet-name>
+		<url-pattern>/eliminarRol</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PermisosRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.PermisosRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PermisosRolServlet</servlet-name>
+		<url-pattern>/permisosRol</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>descargaLicenciaServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.DescargaLicenciaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaLicenciaServletAdmin</servlet-name>
+		<url-pattern>/descargaLicenciaServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>consultarUsuarioServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ConsultarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarUsuarioServletAdmin</servlet-name>
+		<url-pattern>/consultarUsuarioServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>activacionUsuarioServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ActivacionUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>activacionUsuarioServletAdmin</servlet-name>
+		<url-pattern>/activacionUsuarioServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>modificarRolUsuarioServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ModificarRolUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modificarRolUsuarioServletAdmin</servlet-name>
+		<url-pattern>/modificarRolUsuarioServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>consultarEstadisticasUsuarioServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ConsultarEstadisticasUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarEstadisticasUsuarioServletAdmin</servlet-name>
+		<url-pattern>/consultarEstadisticasUsuarioServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>descargaEstadisticasServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.DescargaEstadisticasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>descargaEstadisticasServletAdmin</servlet-name>
+		<url-pattern>/descargaEstadisticasServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>borrarArchivosServletAdmin</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.BorrarArchivosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>borrarArchivosServletAdmin</servlet-name>
+		<url-pattern>/borrarArchivosServletAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>idiomaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>idiomaServlet</servlet-name>
+		<url-pattern>/idiomaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>rolesAdminServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.RolesAdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rolesAdminServlet</servlet-name>
+		<url-pattern>/rolesAdminServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- 	SERVLETS Imagenes de Usuario -->
+	<servlet>
+		<servlet-name>guardarImagenUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.imgusuarios.servlets.GuardarImagenUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>guardarImagenUsuarioServlet</servlet-name>
+		<url-pattern>/guardarImagenUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>imagenServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.imgusuarios.servlets.ImagenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>imagenServlet</servlet-name>
+		<url-pattern>/imagenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>procesarImagenServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.imgusuarios.servlets.ProcesarImagenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>procesarImagenServlet</servlet-name>
+		<url-pattern>/procesarImagenServlet</url-pattern>
+	</servlet-mapping>
+	
+<!-- 	SERVLETS Noticias -->
+	
+	<servlet>
+		<servlet-name>crearNoticiasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.CrearNoticiasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>crearNoticiasServlet</servlet-name>
+		<url-pattern>/crearNoticiasServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ActualizarNoticiasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.ActualizarNoticiasServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>ActualizarNoticiasServlet</servlet-name>
+		<url-pattern>/ActualizarNoticiasServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>imagenNoticiaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.mbc.servlets.ImagenNoticiaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>imagenNoticiaServlet</servlet-name>
+		<url-pattern>/imagenNoticiaServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 	SERVLETS Licencias -->
+	
+	<servlet>
+		<servlet-name>registrarLicenciaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.RegistrarLicenciaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registrarLicenciaServlet</servlet-name>
+		<url-pattern>/registrarLicenciaServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>modificarLicenciaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ModificarLicenciaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modificarLicenciaServlet</servlet-name>
+		<url-pattern>/modificarLicenciaServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 	SERVLETS Roles -->
+	
+	<servlet>
+		<servlet-name>registrarRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.RegistrarRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registrarRolServlet</servlet-name>
+		<url-pattern>/registrarRolServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>actualizarRolServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ActualizarRolServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>actualizarRolServlet</servlet-name>
+		<url-pattern>/actualizarRolServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>actualizarPermisosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.web.admin.servlets.ActualizarPermisosServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>actualizarPermisosServlet</servlet-name>
+		<url-pattern>/actualizarPermisosServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+  	
+<!-- SERVLETS SERVICIO CAPTCHA -->
+	<servlet>
+		<servlet-name>stickyCaptchaServlet</servlet-name>
+		<servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>200</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>60</param-value>
+		</init-param>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>stickyCaptchaServlet</servlet-name>
+		<url-pattern>/stickyCaptchaServlet</url-pattern>
+	</servlet-mapping>	
+
+
+	<!--Restricciones de seguridad -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Registered User Authentication
+				Policy
+			</web-resource-name>
+			<url-pattern>/reg/*</url-pattern>
+			<url-pattern>/descarga/*</url-pattern>
+			<url-pattern>/imageus/*</url-pattern>
+			<url-pattern>/parametrizacion/*</url-pattern>
+			<url-pattern>/admin/*</url-pattern>
+			<url-pattern>/noticias/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>USUARIO_PUBLICO_REGISTRADO</role-name>
+			<role-name>ADMINISTRADOR_TEMATICO</role-name>
+			<role-name>COORDINADOR_TEMATICO_IDEAM</role-name>
+			<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name>
+			<role-name>Gestor_inventarios_forestales_IDEAM</role-name>
+			<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name>
+			<role-name>ADMINISTRADOR_GENERAL</role-name>
+			<role-name>Coordinador_general_REDD</role-name>
+			<role-name>ROL_EXTRA</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<!--#Form-Based Authentication -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Form-Based Authentication
+			Area
+		</realm-name>
+		<form-login-config>
+ 			<form-login-page>/indexFrames.jsp</form-login-page>
+			<form-error-page>/indexFrames2.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+
+	<!--#Roles -->
+	<security-role>
+		<description>Usuario Publico</description>
+		<role-name>USUARIO_PUBLICO_REGISTRADO</role-name>
+	</security-role>
+	<security-role>
+		<description>Administrador Tematico</description>
+		<role-name>ADMINISTRADOR_TEMATICO</role-name>
+	</security-role>
+	<security-role>
+		<description>COORDINADOR_TEMATICO_IDEAM</description>
+		<role-name>COORDINADOR_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_TEMATICO_IDEAM</description>
+		<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>Gestor_inventarios_forestales_IDEAM</description>
+		<role-name>Gestor_inventarios_forestales_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_CONSULTA_IDEAM</description>
+		<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>ADMINISTRADOR_GENERAL</description>
+		<role-name>ADMINISTRADOR_GENERAL</role-name>
+	</security-role>
+	<security-role>
+		<description>Coordinador_general_REDD</description>
+		<role-name>Coordinador_general_REDD</role-name>
+	</security-role>
+	<security-role>
+		<description>ROL_EXTRA</description>
+		<role-name>ROL_EXTRA</role-name>
+	</security-role>
+
+<!-- 	<error-page> -->
+		<!-- Uncaught exception -->
+<!-- 		<error-code>500</error-code> -->
+<!-- 		<location>/home.jsp</location> -->
+<!-- 	</error-page> -->
+	<error-page>
+		<!-- Demasiado tiempo para el log in -->
+		<error-code>408</error-code>
+		<location>/home.jsp</location>
+	</error-page>
+<!-- 	<error-page> -->
+		<!-- No encontrada -->
+<!-- 		<error-code>404</error-code> -->
+<!-- 		<location>/notFound.jsp</location> -->
+<!-- 	</error-page> -->
+	
+
+</web-app>

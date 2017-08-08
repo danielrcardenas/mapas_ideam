@@ -1,0 +1,246 @@
+
+.NavBar { 
+
+} 
+
+
+.NavBar .yui-toolbar-group ul {
+
+        margin: 0px 12px;
+        padding: 0px;
+}
+
+
+div.NavBar span span.yui-toolbar-icon 
+{ 
+        background-image : url(../../../../../../images/tilapia-base-sprite.png) !important; /* override YUI's */
+        background-repeat : no-repeat;
+        left: 6px !important; /* override YUI's */
+        top: 3px !important; /* override YUI's */
+}
+
+
+
+div.NavBar span.yui-toolbar-zoom span.yui-toolbar-icon { 
+
+        background-position : 0px -100px !important;
+} 
+
+
+.NavBar .yui-toolbar-zoomout span.yui-toolbar-icon { 
+
+        background-position : 0px -150px !important;
+} 
+
+
+.NavBar .yui-toolbar-pan span.yui-toolbar-icon { 
+
+        background-position : 0px -200px !important;
+}
+
+
+.NavBar .yui-toolbar-interactivezoom span.yui-toolbar-icon {
+
+        background-position : 0px -250px !important;
+}
+
+
+.NavBar .yui-toolbar-featureinfo span.yui-toolbar-icon { 
+
+        background-position : 0px -300px !important;
+}
+
+
+.NavBar .yui-toolbar-measure span.yui-toolbar-icon { 
+
+        background-position : 0px -350px !important;
+}
+
+
+.NavBar .yui-toolbar-history-back span.yui-toolbar-icon {
+
+        background-position : 0px -400px !important;
+} 
+
+
+.NavBar .yui-toolbar-history-forward span.yui-toolbar-icon { 
+
+        background-position : 0px -450px !important;
+} 
+
+.NavBar .yui-toolbar-printclient span.yui-toolbar-icon { 
+
+        background-position : 0px -2575px !important;
+} 
+
+.NavBar .yui-toolbar-navigate span.yui-toolbar-icon { 
+
+        background-position : 0px -2650px !important;
+} 
+
+/* Padding of the overlay tab contents */
+.yui-toolbar-loadcontext {
+
+        width: 400px;
+        margin: 1em;
+}
+
+
+.yui-toolbar-loadcontext .cancel {
+
+    text-align : right;
+    margin-top : 12px;
+}
+
+
+.yui-toolbar-loadcontext .yui-content form {
+
+        padding: 1em;
+}
+
+
+.NavBar .yui-toolbar-loadcontext span.yui-toolbar-icon {
+
+        background-position : 0px -500px !important;
+}
+
+
+.NavBar .yui-toolbar-savecontext span.yui-toolbar-icon {
+
+        background-position : 0px -550px !important;
+}
+
+
+.NavBar .yui-toolbar-loadsavedata span.yui-toolbar-icon {
+
+        background-position : 0px -600px !important;
+}
+
+
+/* Load/save data overlay content */
+.yui-toolbar-loadsavedata {
+
+        width: 400px;
+        margin: 1em;
+}
+
+.yui-toolbar-loadsavedata .yui-content {
+        
+        padding: 1em;
+}
+
+.yui-toolbar-loadsavedata  div.popup-actions {
+
+        text-align: right;
+}
+
+
+.NavBar .yui-toolbar-setextent span.yui-toolbar-icon {
+
+        background-position : 0px -650px !important;
+}
+
+
+.NavBar .yui-toolbar-selectbox span.yui-toolbar-icon { 
+
+        background-position : 0px -700px !important;
+} 
+
+
+.NavBar .yui-toolbar-selectpolygon span.yui-toolbar-icon { 
+
+        background-position : 0px -1600px !important;
+} 
+
+
+.NavBar .yui-toolbar-sendcontext span.yui-toolbar-icon { 
+
+        background-position : 0px -1650px !important;
+} 
+
+
+
+
+
+/* Find features button */
+.NavBar .yui-toolbar-findfeatures span.yui-toolbar-icon {
+
+        background:url(../../../../../../images/api/ui/navigation/NavBar/getfeatbox.gif) center center no-repeat !important;
+        left: 5px;
+}
+
+div.find-features {
+
+        margin: 5px;
+}
+
+div.find-features div.popup-actions {
+
+        text-align: right;
+}
+
+div.find-features div.FeatureFinderTable {
+
+        width: 340px;
+        overflow-x: auto;
+}
+
+
+
+
+.NavBar .yui-button-selected {
+
+        background-repeat: repeat-x; 
+} 
+
+
+
+.NavBarButtonOverlayContent .toolbar-savecontext {
+
+    margin: 10px;
+    width: 15em;
+}
+
+.NavBarButtonOverlayContent .toolbar-savecontext .disabled {
+
+    color: gray;
+}
+
+
+.NavBarButtonOverlay {
+
+}
+
+
+.NavBarButtonOverlayContent {
+
+        background-color: #e7f3ff;
+        opacity: 0.95;
+        filter: alpha(opacity=95);
+        border: 1px solid gray;
+}
+
+
+.NavBarButtonOverlayContent > * {
+
+        margin: 10px;
+}
+
+
+
+.NavBarButtonOverlayContent tr.dialog-options {
+
+    text-align: right;
+}
+
+.NavBarButtonOverlayContent tr.dialog-options td span.yui-button {
+
+    margin-top: 12px;
+}
+
+
+
+.NavBarButtonOverlayContent form.toolbar-savecontext > table {
+
+    width : 100%;
+}

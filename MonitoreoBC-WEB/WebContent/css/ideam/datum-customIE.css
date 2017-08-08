@@ -1,0 +1,515 @@
+/*
+	Creado por: JULIAN ERNESTO GONZALEZ CRUZ
+	Fecha:      Abril 28 de 2011
+	Ultima Modificacion: Septiembre 12 de 2011
+*/
+ @CHARSET "ISO-8859-1";
+
+/* Contexto general  de la aplicacion */ 
+ 
+* {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.98em;
+}
+ 
+body {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	background: #0D899C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	width:100%;
+	min-width:1280px;
+	overflow: scroll;
+	height: 99%;
+	position: static;
+}
+ 
+/* Estilos especificos para los elementos HTML de acuerdo a las bases del IDEAM */
+ 
+label {
+	color: black;
+	font-weight: bolder;
+	font-size: 1.2em;
+} 
+ 
+img{
+	border: 0;
+}
+ 
+span.obligatorio {
+	color:red;
+	font-weight: bold;
+}
+ 
+.txtlicencia {
+	 border: solid 1px black;
+	 width: 500px;
+	 height: 220px;
+	 overflow: auto;
+} 
+ 
+/*contenedor principal del contenido*/ 
+.container {
+	width: 98%;
+	height:95%;
+	min-width: 750px;
+	background: #FFF;
+	margin: 0 auto; 
+	position: static;
+}
+ 
+/*encabezado total*/
+.header {
+	background: #399DAD url(../../images/ideam/CENEFAREDD.jpg) repeat-x 20px -10px;
+	height:192px;
+	position: static;
+}
+ 
+.menu {
+	top: 148px;
+	height:68px;
+	float: left;	
+	padding:0px;
+	position: absolute;
+}
+ 
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+.menu ul li a{
+	display: block;
+	border-left-width: 0;
+	text-decoration: none;	
+	text-shadow: 5px black;
+	color: /*white*/#183E62;
+	margin-right: -10px;
+}
+
+.menu ul li a div{
+	height: 54px;
+}
+
+.menu ul li a div.proyectos{
+	background: url('../../images/ideam/datosdefor.png') no-repeat 0px 0px;	 
+}
+
+.menu ul li a:hover div.proyectos{
+	background: url('../../images/ideam/datosdeforluz.png') no-repeat -15px 0px;
+}
+
+.menu ul li a div.parcelas{
+	background: url('../../images/ideam/parcelas.png') no-repeat -15px 0px;
+}
+
+.menu ul li a:hover div.parcelas{
+	background: url('../../images/ideam/parcelasluz.png') no-repeat -15px 0px;
+} 
+ 
+.menu ul li a div.biomasa{
+	background: url('../../images/ideam/biomasayc12045.png') no-repeat -15px 0px;
+}
+
+.menu ul li a:hover div.biomasa{
+	background: url('../../images/ideam/biomasayc12045luz.png') no-repeat -15px 0px;
+}
+
+.menu ul li a div.reportes{
+	background: url('../../images/ideam/docsredd.png') no-repeat -15px 0px;
+}
+
+.menu ul li a:hover div.reportes{
+	background: url('../../images/ideam/docsreddluz.png') no-repeat -15px 0px;
+}
+ 
+.menu ul li a div.visores{
+	background: url('../../images/ideam/imagesymapas.png') no-repeat -15px 0px;
+}
+
+.menu ul li a:hover div.visores{
+	background: url('../../images/ideam/imagesymapasluz.png') no-repeat -15px 0px;
+}
+ 
+.menu ul li a div.buscadores{
+	background: url('../../images/ideam/buscardatos12045.png') no-repeat -25px 0px;
+}
+
+.menu ul li a:hover div.buscadores{
+	background: url('../../images/ideam/buscardatos12045luz.png') no-repeat -25px 0px;
+}
+ 
+.menu ul li a div.usuarios{
+	background: url('../../images/ideam/users.png') no-repeat 15px 0px;
+}
+
+.menu ul li a:hover div.usuarios{
+	background: url('../../images/ideam/users.png') no-repeat 15px 0px;
+}
+ 
+.menu ul li ul{
+	left: 0;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	background: #EAEBD8;
+	border: 1px solid #5970B2;
+	margin-top: -10px;
+}
+
+.menu ul li ul li{
+	display: list-item;
+	float: none;
+	height: 30px;
+	margin-bottom: 5px;
+	padding-bottom:5px; 
+	border-bottom: 1px solid #5970B2;
+	top:10px;
+}
+ 
+.menu ul li ul li a{
+ 	background-attachment:fixed; 		
+	color:#183E62;
+	margin-right: 10px;
+}
+ 
+.menu ul li ul li a.cproyectos{	
+	background: url('../../images/ideam/consultarproyectos12045.png') no-repeat -10px 0px;
+	background-size: 50%;
+}
+
+.menu ul li ul li a.cproyectos:hover{
+	background: url('../../images/ideam/consultarproyectos12045luz.png') no-repeat -10px 0px;
+	background-size: 50%;
+}
+
+.menu ul li ul li a.cparcelas{
+	background: url('../../images/ideam/consultarparcelas.png') no-repeat -10px 0px;
+	background-size: 50%;
+}
+
+.menu ul li ul li a.cparcelas:hover{
+	background: url('../../images/ideam/consultarparcelasluz.png') no-repeat -10px 0px;
+}
+ 
+.menu ul li ul li a.cbiomasa{
+	background: url('../../images/ideam/consultarbiomasayc12045.png') no-repeat -10px 0px;
+}
+
+.menu ul li ul li a.cbiomasa:hover{
+	background: url('../../images/ideam/consultarbiomasayc12045luz.png') no-repeat -10px 0px;
+}
+ 
+.menu ul li ul li a.creportes{
+	background: url('../../images/ideam/docsredd.png') no-repeat -10px 0px;
+}
+
+.menu ul li ul li a.creportes:hover{
+	background: url('../../images/ideam/docsreddluz.png') no-repeat -10px 0px;
+}
+ 
+.menu ul li ul li a.v1{	
+	background: url('../../images/ideam/imagesymapas.png') no-repeat -15px 0px;
+	width: 300px;
+	height: 30px;
+	padding-left: 50px;
+}
+
+.menu ul li ul li a.v1:hover{
+	background: url('../../images/ideam/imagesymapasluz.png') no-repeat -15px 0px;	
+}
+ 
+.menu ul li ul li a.v2{
+	background: url('../../images/ideam/mapacolombia.png') no-repeat -20px 0px;
+	width: 300px;
+	height: 30px;	
+	padding-left: 50px;;
+}
+
+.menu ul li ul li a.v2:hover{
+	background: url('../../images/ideam/mapacolombialuz.png') no-repeat -20px 0px;
+}
+ 
+.menu ul li ul li a.b1{	
+	background: url('../../images/ideam/docsredd.png') no-repeat -15px 0px;
+	width: 300px;
+	height: 30px;
+	padding-left: 50px;
+	background-size: 50%;
+}
+
+.menu ul li ul li a.b1:hover{
+	background: url('../../images/ideam/docsreddluz.png') no-repeat -15px 0px;	
+	background-size: 50%;
+}
+ 
+.menu ul li ul li a.b2{
+	background: url('../../images/ideam/buscardatos12045.png') no-repeat -15px 0px;
+	width: 300px;
+	height: 30px;	
+	padding-left: 50px;;
+	background-size: 50%;
+}
+ 
+.menu ul li ul li a.b2:hover{
+	background: url('../../images/ideam/buscardatos12045luz.png') no-repeat -15px 0px;	
+	background-size: 50%;
+}
+
+* html .menu ul li { float: left; height: 2%; width: 200px; top: -10px;}
+ 
+h3.mtitulo{
+	 text-align:left;
+	 margin-left:85px;
+	 padding-top: 5px;
+	 padding-right: 0px;
+}
+ 
+h3.mtitulo2{
+	 text-align:left;
+	 margin-left:100px;	
+	 padding-top: 5px;
+	 padding-right: 10px;
+	 
+	 top:-25px;	
+}
+ 
+h3.mtitulo3{
+	 text-align:left;
+	 margin-left:80px;	
+	 padding-top: 5px;
+	 padding-right: 10px;
+	 
+	 top:-25px;	
+}
+ 
+#security {
+	margin: 0px;	
+	float: right;
+	margin-top: 0px;
+	margin-right: 8px;
+	margin-bottom: -18px;
+}
+ 
+#security label.login {
+	color: /*white*/#183E62;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+ 
+#security input.datos {
+	color: black;
+	font-weight: normal;
+	font-size: 1.0em;
+	height: 18px;
+	width: 100px;
+	margin-top: 1px;
+}
+ 
+#security a.registro{
+	cursor: pointer;
+}
+
+#security a.registro:hover img{
+	cursor: pointer;
+	background: url('../../images/ideam/greenmsn.png') no-repeat 0px 0px;
+} 
+
+#security a.recordatorio img{
+	cursor: pointer;
+}
+ 
+/*#security a.recordatorio:hover img{
+	cursor: pointer;
+	background: url('../../images/ideam/greenmsn.jpg') no-repeat 0px 0px;
+} 
+ 
+/*cuerpo del proyecto para manejo del contenido*/
+ 
+#site-tree {
+	/*min-width:750px;*/
+	padding: 3px 2px 3px 10px;
+	margin: 0px;
+	overflow: hidden;
+	font-size: 0.8em;
+	color: #0AB3DB;
+	background: #E0EFF2;
+	border-bottom: 2px solid #94D5F5;
+	position: relative;
+	width: 100%;
+}
+ 
+.content {	
+	padding:0;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	margin-left:20px;
+	height:96%;
+	width:97%;
+	/*overflow:auto;*/
+	border: 1px solid #5970B2;
+	position: static;
+}
+ 
+/*pie de pagina de la aplicacion*/ 
+.footer {
+	padding: 10px 0;
+	height:48px;
+	background: #0D899C url(../../images/ideam/vinetaN4.jpg) repeat-x 10px 0;
+	font-size:11px;
+	position: static;
+	width: 100%;	
+}
+
+.menu2 {
+	background: #B7D0ED;
+	margin: auto 30px;
+	margin-top:-20px;
+	height:20px;
+	color:#183E62;
+	font-weight:bolder;
+	padding:10px;
+}
+ 
+/*
+	Tabs de navegacion de los formularios 
+*/
+ 
+#page-wrap {
+	margin: 20px auto;
+	background: white url(../../images/ideam/Arbol800x600.jpg) no-repeat center 50px;
+	background-color: /*#FDFAE9*/white;
+	margin-top: 0; 
+	margin-bottom:10px;
+	padding-bottom: 10px;
+	position: relative;
+	width: 100%;
+}
+ 
+.list-wrap {
+	floa:left;
+	display:block;
+	color: black; 
+	overflow: visible;
+	position: relative;	
+}
+.hide { 
+	position: absolute; 
+	top: -9999px; 
+	left: -9999px; 
+}
+
+#form-tabs {
+	padding: 10px;
+	padding-left: 0px; 
+	margin: 10px 10px 10px 10px; 
+	-moz-box-shadow: 2px 2px 5px #666; 
+	-webkit-box-shadow: 2px 2px 5px #000000;
+	padding-bottom: 20px; 
+	overflow: auto;
+	width: 98%;
+}
+
+#form-tabs .nav { 
+	overflow: hidden; 
+	margin: 0 0 5px 0;
+	height: auto;
+	width: 98%;
+}
+ 
+#form-tabs .nav li { 
+	width: auto; 
+	float: left; 
+	margin: 0 10px 0 0;
+	border: 1px solid black; 
+}
+ 
+#form-tabs .nav li.last { 
+	margin-right: 0; 
+}
+ 
+#form-tabs .nav li a { 
+	text-decoration:none;
+	display: block; 
+	padding: 5px; 
+	background-color:#26A2C0;
+	color: white;
+	font-weight:bold;
+	font-size: 1em; 
+	text-align: center; 
+	border: 0; 
+}
+ 
+#form-tabs .nav li a:hover { 
+	background-color: #075779;
+	border: 2px 
+}
+
+#form-tabs ul { 
+	list-style: none; 
+}
+ 
+#form-tabs ul li a { 
+	display: block; 
+	border-bottom: 1px solid #777; 
+	padding: 4px; 
+	color: #777; 
+}
+ 
+#form-tabs ul li a:hover { 
+	background-color: #FFFFF; 
+	color: #00000; 
+}
+ 
+#form-tabs ul li:last-child a { 
+	border: none; 
+}
+
+#form-tabs ul li a.current, #form-tabs ul li a:hover { 
+	background-color: #075779; 
+	color: white; 
+	border: 1px solid white;
+}
+ 
+/*estilos de elememntos especificos*/
+ 
+.boton {
+	/*background-image: url("../../images/ideam/boton-ovalado-right.gif");*/
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-color: white;
+	padding:4px 6px 4px 6px;
+	float: left;
+	font-weight: bolder;
+	margin: 5px;
+}  
+
+.tblSalida{
+	border-collapse: collapse;
+	border-spacing: 5px;
+	border: 2px solid #0066CC;
+	background-color: #fefefe;
+}
+ 
+.tblSalida td{
+	border-collapse: collapse;
+	border-spacing: 5px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	background-color: #fefefe;
+}
+ 
+.tblSalida th{
+	background-color: 99CCFF;
+	color: white;
+	font-weight: bolder;
+	font-size: 1.2em;
+} 

@@ -1,0 +1,85 @@
+
+div.service-tree span.access-type {
+
+    font-weight: bold;
+}
+
+
+div.service-tree span.service-type {
+
+}
+
+
+div.service-tree div.tree-holder span {
+    
+    font-size: 12px;
+}
+
+
+div.service-tree div.tree-holder table tbody tr td span.auth-needed {
+
+    color: red;
+}
+
+
+
+div.service-tree span.wms-services {
+    display      : block; 
+    height       : 22px;
+    padding-left : 22px;
+    background-color : transparent;
+    background-image : url(../../../../../../images/tilapia-base-sprite.png);
+    background-repeat : no-repeat;
+    background-position : 0px -1450px; 
+} 
+
+
+div.service-tree span.wfs-services {
+    display      : block; 
+    height       : 22px;
+    padding-left : 22px;
+    background-color : transparent;
+    background-image : url(../../../../../../images/tilapia-base-sprite.png);
+    background-repeat : no-repeat;
+    background-position : 0px -1500px; 
+} 
+
+
+div.service-tree span.wcs-services {
+    display      : block; 
+    height       : 22px;
+    padding-left : 22px;
+    background-color : transparent;
+    background-image : url(../../../../../../images/tilapia-base-sprite.png);
+    background-repeat : no-repeat;
+    background-position : 0px -1550px;
+} 
+
+
+div.service-tree span.service {
+
+}
+
+
+div.service-tree .blinkOdd {
+
+    color: cyan !important;
+}
+
+
+
+
+.yui-skin-sam div.service-tree div.ygtvspacer {
+
+    width : 18px !important;
+}
+
+
+
+.yui-skin-sam div.service-tree a.ygtvspacer {
+
+    width : 18px !important;
+    display: block;
+}
+
+

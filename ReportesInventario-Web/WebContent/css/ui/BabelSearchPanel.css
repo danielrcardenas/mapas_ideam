@@ -1,0 +1,40 @@
+
+
+div.babel-search-panel {
+
+}
+
+div.babel-search-panel div.babel-search-panel-frame div.buttons {
+
+    text-align: right;
+}
+
+
+div.babel-search-panel div.babel-search-panel-frame table tbody.criteria-holder tr.criterion-entry td.label-cell {
+
+    vertical-align: top;
+}
+
+
+
+div.babel-search-panel div.babel-search-panel-frame table tbody.criteria-holder tr.criterion-entry td.operators-cell {
+
+    /* Keep the operators cell as small as possible, so that the 
+       selector is not 'floating' around */
+    width: 1px;
+}
+
+
+
+div.babel-search-panel div.babel-search-panel-frame table tbody.criteria-holder tr.multi-properties-criterion-entry td.multi-properties-holder table {
+
+}
+
+
+div.babel-search-panel div.babel-search-panel-frame table tbody.criteria-holder tr.multi-properties-criterion-entry td.multi-properties-holder table tbody tr td {
+
+    padding-left:  3px;
+    padding-right: 3px;
+    text-align: center;
+}
+

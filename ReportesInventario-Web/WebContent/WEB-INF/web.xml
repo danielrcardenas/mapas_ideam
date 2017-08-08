@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+ xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+ <display-name>ReportesInventario</display-name>
+ <servlet>
+  <servlet-name>consultarReporteServlet</servlet-name>
+  <servlet-class>co.gov.ideamredd.servlets.ConsultarReporteServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <servlet-name>consultarReporteSimilitudServlet</servlet-name>
+  <servlet-class>co.gov.ideamredd.servlets.ConsultarReporteSimilitudServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <servlet-name>consultarReporteEstCompServlet</servlet-name>
+  <servlet-class>co.gov.ideamredd.servlets.ConsultarReporteEstCompServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <servlet-name>descargaPdfServlet</servlet-name>
+  <servlet-class>co.gov.ideamredd.servlets.DescargaPDFServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <servlet-name>descargaXlsServlet</servlet-name>
+  <servlet-class>co.gov.ideamredd.servlets.DescargaXLSServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>consultarReporteServlet</servlet-name>
+  <url-pattern>/consultarReporteServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>consultarReporteSimilitudServlet</servlet-name>
+  <url-pattern>/consultarReporteSimilitudServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>consultarReporteEstCompServlet</servlet-name>
+  <url-pattern>/consultarReporteEstCompServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>descargaPdfServlet</servlet-name>
+  <url-pattern>/descargaPdfServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>descargaXlsServlet</servlet-name>
+  <url-pattern>/descargaXlsServlet</url-pattern>
+ </servlet-mapping>
+</web-app>

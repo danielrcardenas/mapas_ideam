@@ -1,0 +1,4 @@
+<jboss-web>
+	<security-domain>java:/jaas/simpleWebAuthenticationPolicy
+	</security-domain>
+</jboss-web>  

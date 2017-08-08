@@ -1,0 +1,37 @@
+
+
+div.loading-sign-wrapper {
+
+        background-color: white;
+        border: 1px solid #e0e0ff;
+        position: absolute;
+}
+
+
+
+div.loading-sign-wrapper div.progress-bar-canvas {
+
+        background-color: #f8f8ff;
+        border: 1px solid #f4f4ff;
+        margin: 2px;
+}
+
+
+
+div.loading-sign-wrapper div.progress-bar-canvas div.progress-bar {
+
+        background-image: url('../../../../../../images/tilapia-base-sprite.png');
+        backgrousd-repeat: repeat-x;
+        background-position: 0 -1925px;
+}
+
+
+
+/* Style when the progress bar is set in a map */
+div.map-loading-sign {
+
+        z-index: 2000;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+}

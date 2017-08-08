@@ -1,0 +1,32 @@
+
+th {
+        font-size:8pt;
+}
+
+
+span.filter-panel-delete-button SPAN {
+        border:none  !important;
+}
+
+
+span.filter-panel-delete-button {
+        background : none !important;
+        border:none !important;
+}
+
+
+span.filter-panel-delete-button span button {
+        background : url(../../../../../../images/tilapia-base-sprite.png);
+        background-repeat: no-repeat;
+        background-position: 0 -2025px;
+        width: 14px;
+        min-height: 1em !important;
+        text-indent: 20px;
+        overflow: hidden
+}
+
+
+div.filter-configurator {
+
+    margin-top: 18px;
+}

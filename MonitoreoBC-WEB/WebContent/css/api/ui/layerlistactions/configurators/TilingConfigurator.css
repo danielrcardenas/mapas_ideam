@@ -1,0 +1,20 @@
+
+.configure-layer-popup .tab-view .tiling-configurator {
+
+}
+
+
+.configure-layer-popup .tab-view .tiling-configurator span.label {
+
+        margin-left: 12px;
+        margin-right: 12px;
+        font-weight: bold;
+}
+
+
+.configure-layer-popup .tab-view .tiling-configurator div.apply-holder {
+
+        text-align: right;
+}
+
+

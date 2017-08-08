@@ -1,0 +1,104 @@
+
+
+.GEditBar img.deselected { 
+
+    border: 2px solid white;
+}
+
+
+.GEditBar img.selected { 
+
+    border: 2px solid #3169a2;
+}
+
+
+.GEditBar .yui-toolbar-group ul {
+    
+    margin: 0px 12px;
+    padding: 0px;
+}
+
+
+.GEditBar .yui-toolbar-container .yui-push-button span.yui-toolbar-icon  { 
+    
+    background-image : url(../../../../../../images/tilapia-base-sprite.png) !important;
+    background-repeat: no-repeat;
+    left : 5px !important;
+    z-index: 10;
+} 
+
+
+
+.GEditBar .yui-toolbar-add-vertex span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2350px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-delete-vertex span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2375px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-move-vertex span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2400px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-add-ring span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2425px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-add-linestring span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2450px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-add-polygon span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2475px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-container .yui-toolbar-undoedit span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2500px !important;
+    left: 9px !important;
+    top: 4px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-container .yui-toolbar-redoedit span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2525px !important;
+    left: 9px !important;
+    top: 4px !important;
+} 
+
+
+
+.GEditBar .yui-toolbar-container .yui-toolbar-accept-geometry span.yui-toolbar-icon 
+{ 
+    background-position: 0px -2550px !important;
+    left: 9px !important;
+    top: 4px !important;
+} 
+
+
+.GEditBar .yui-toolbar-container .yui-toolbar-subcont .yui-toolbar-group {
+
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}

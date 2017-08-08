@@ -1,0 +1,30 @@
+
+
+div.service-inspector div.yui-dt span.name-cell, div.service-inspector div.yui-dt span.metadata-cell, div.service-inspector div.yui-dt span.extents-cell {
+
+    cursor : pointer;
+    color  : blue;
+    text-decoration : underline;
+}
+
+
+div.service-inspector div.information {
+
+    margin: 3px;
+    font-weight: bold;
+}
+
+
+div.service-inspector div.results div.yui-dt-col-name div.icon {
+
+    overflow : hidden;
+    float : left;
+    margin: 2px;
+    background-position: center center;
+}
+
+
+.layer-added a, .layer-added span {
+
+    color: gray !important;
+}

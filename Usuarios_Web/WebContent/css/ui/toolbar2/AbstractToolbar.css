@@ -1,0 +1,16 @@
+
+
+.ToolbarButtonOverlay > * {
+
+        background-color: #e7f3ff;
+        opacity: 0.95;
+        filter: alpha(opacity=95);
+        border: 1px solid gray;
+}
+
+
+
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-subcont
+{
+    border: 0px;
+}

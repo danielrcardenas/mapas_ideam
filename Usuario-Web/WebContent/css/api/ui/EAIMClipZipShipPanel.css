@@ -1,0 +1,66 @@
+
+div.eaim-clipzipship-frame {
+
+}
+
+
+div.eaim-clipzipship-frame select.selected-entry {
+
+    width: 100%;
+}
+
+
+div.eaim-clipzipship-frame div.entry-buttons {
+
+    text-align: right;
+    margin-top: 6px;
+}
+
+
+div.eaim-clipzipship-frame div.submit-area {
+
+    margin-top: 12px;
+    text-align: right;
+}
+
+
+div.eaim-clipzipship-frame div.coverage-channels td.center div.row-icon {
+
+    width: 16px;
+    height: 16px;
+    background-image: url ("../../../../../../images/tilapia-base-sprite.png");
+    background-repeat : no-repeat;
+}
+
+
+div.eaim-clipzipship-frame div.coverage-channels td.center div.row-icon-toleft {
+
+    background-position: 0 -2700px;
+}
+
+
+div.eaim-clipzipship-frame div.coverage-channels td.center div.row-icon-toright {
+
+    background-position: 0 -2725px;
+}
+
+
+div.eaim-clipzipship-frame div.coverage-channels td.center div.row-icon-alltoleft {
+
+    background-position: 0 -2750px;
+}
+
+
+div.eaim-clipzipship-frame div.coverage-channels td.center div.row-icon-alltoright {
+
+    background-position: 0 -2775px;
+}
+
+
+
+
+
+
+
+
+

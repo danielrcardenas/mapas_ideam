@@ -1,0 +1,434 @@
+
+
+
+
+
+
+
+
+ <!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd' >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link type="text/css" rel="stylesheet" href="css/estilos.css" media="all" />
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel='stylesheet' type='text/css' media='all' href='js/jscalendar/calendar-win2k-cold-1.css' title='win2k-cold-1' />
+
+<script type='text/javascript' src='js/jscalendar/calendar.js'></script>
+<script type='text/javascript' src='js/jscalendar/lang/calendar-en.js'></script>
+<script type='text/javascript' src='js/jscalendar/calendar-setup.js'></script>
+
+<title>
+Detalle de Parcela
+</title>
+
+<script type='text/javascript' src='js/ajax.js'></script>
+<script type='text/javascript' src='js/ajaxLoader.js'></script>
+<script type='text/javascript' src='js/auxiliares.js'></script>
+<script type='text/javascript' src='js/jquery.min.js'></script>
+
+
+<script type='text/javascript'>
+
+$(document).ready(function(){
+	
+});
+
+function nueva(f) {
+	url = 'Parcela?accion=detalle_parcela&usuario=123&idioma=es';
+	location.href = url;
+}
+
+function editar(f) {
+	if (validar(f))	{
+		f.accion.value = 'guardar';
+		f.submit();
+	}
+}
+
+function validar(f) {
+	var go = true;
+
+	if (f.PRCL_ID_UPM.value == '') {
+		alert('Por favor especifique el id de UPM:.');
+		f.PRCL_ID_UPM.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_LATITUD.value == '') {
+		alert('Por favor especifique la latitud del jalón principal de la parcela:.');
+		f.PRCL_LATITUD.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_LONGITUD.value == '') {
+		alert('Por favor especifique la longitud del jalón principal de la parcela:.');
+		f.PRCL_LONGITUD.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_NOMBRE.value == '') {
+		alert('Por favor especifique el nombre de la parcela:.');
+		f.PRCL_NOMBRE.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_FECHAINI_APROXIMACION.value == '') {
+		alert('Por favor especifique la fecha inicial de aproximación a la parcela:.');
+		f.PRCL_FECHAINI_APROXIMACION.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_FECHAFIN_APROXIMACION.value == '') {
+		alert('Por favor especifique la fecha final de aproximación a la parcela:.');
+		f.PRCL_FECHAFIN_APROXIMACION.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_FECHAINI_LOCALIZACION.value == '') {
+		alert('Por favor especifique la fecha inicial de localización a la parcela:.');
+		f.PRCL_FECHAINI_LOCALIZACION.focus();
+		go = false;
+	}
+	
+	if (f.PRCL_FECHAFIN_LOCALIZACION.value == '') {
+		alert('Por favor especifique la fecha final de localización a la parcela:.');
+		f.PRCL_FECHAFIN_LOCALIZACION.focus();
+		go = false;
+	}
+	
+	return go;
+}
+
+function eliminar(f) {
+	if (confirm('Confirma la eliminación del elemento seleccionado:')) {
+		f.accion.value = 'eliminar';
+		f.submit();
+	}
+}
+
+function exportar_a_excel(f) {
+	url = 'Individuo?accion=exportar&usuario=123&idioma=es&PRCL_CONSECUTIVO=' + f.PRCL_CONSECUTIVO.value;
+	window.open(url);	
+}
+
+function exportar_a_pdf(f) {
+	url = 'Individuo?accion=exportar_individuo_pdf&usuario=123&idioma=es&PRCL_CONSECUTIVO=' + f.PRCL_CONSECUTIVO.value;
+	window.open(url);	
+}
+
+function coordenadas(f) {
+	var url = '';
+	if (f.PRCL_CONSECUTIVO.value != '') {
+		url = 'Parcela?accion=coordenadas&control=&usuario=123&idioma=es&PRCL_CONSECUTIVO='+f.PRCL_CONSECUTIVO.value;
+		window.open(url); 
+	}
+	else {
+		alert('Antes debe crear la parcela');	
+	}
+}
+
+function contactos(f) {
+	var url = '';
+	if (f.PRCL_CONSECUTIVO.value != '') {
+		url = 'Parcela?accion=contactos_parcela&control=&usuario=123&idioma=es&PRCL_CONSECUTIVO='+f.PRCL_CONSECUTIVO.value;
+		window.open(url); 
+	}
+	else {
+		alert('Antes debe crear la parcela');	
+	}
+}
+
+function consultarMunicipios() {
+	ajaxLoader('Auxiliar?accion=ajax_municipios&opcionVacia=true','PRCL_MUNICIPIO','div_feedback_municipios','','departamentos_seleccionados','','No se encontraron municipios.');	
+}
+
+function esNumero(num){
+    return (!isNaN(num) && num != null);
+}
+
+var jalon;
+
+function success(position)
+{
+	var PRCL_LATITUD = document.getElementById('PRCL_LATITUD');
+	var PRCL_LONGITUD = document.getElementById('PRCL_LONGITUD');
+
+	var lat = position.coords.latitude;
+	var lon = position.coords.longitude;
+
+	if (!esNumero(lat)) lat = 0;
+	if (!esNumero(lon)) lon = 0;
+	
+	PRCL_LATITUD.value = lat;
+	PRCL_LONGITUD.value = lon;
+
+	jalon = L.icon({
+	    iconUrl: 'mapas_parcelas/images/jalon-icon.png',
+	    shadowUrl: 'mapas_parcelas/images/jalon-shadow.png',
+
+	    //iconSize:     [20, 20], // size of the icon
+	    //shadowSize:   [20, 20], // size of the shadow
+	    iconAnchor:   [14, 40], // point of the icon which will correspond to marker's location
+	    //shadowAnchor: [10, 20],  // the same for the shadow
+	    //popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+	});
+	
+	L.marker([lat, lon], {icon: jalon}).addTo(map).bindPopup("GPS").openPopup();
+};
+
+function fail(error)
+{
+	switch(error.code) // Returns 0-3
+	{
+		case 0:
+			// Unknown error alert error message
+			alert(error.message);
+			break;
+
+		case 1:
+			// Permission denied alert error message
+			alert(error.message);
+			break;
+	}
+};
+
+var markerVertice = null;
+
+function establecerCoordenadasDesdeElMapa(lat, lon) {
+	var PRCL_LATITUD = document.getElementById('PRCL_LATITUD');
+	var PRCL_LONGITUD = document.getElementById('PRCL_LONGITUD');
+		
+	if (!esNumero(lat)) lat = 0;
+	if (!esNumero(lon)) lon = 0;
+
+	PRCL_LATITUD.value = lat;
+	PRCL_LONGITUD.value = lon;
+
+	jalon = L.icon({
+	    iconUrl: 'mapas_parcelas/images/jalon-icon.png',
+	    shadowUrl: 'mapas_parcelas/images/jalon-shadow.png',
+
+	    //iconSize:     [20, 20], // size of the icon
+	    //shadowSize:   [20, 20], // size of the shadow
+	    iconAnchor:   [14, 40], // point of the icon which will correspond to marker's location
+	    //shadowAnchor: [10, 20],  // the same for the shadow
+	    //popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+	});
+
+	if (markerVertice == null) {
+		markerVertice = L.marker([lat,lon], {icon: arbolito});
+		markerVertice.addTo(map);
+	}
+	else {
+		markerVertice.setLatLng(L.latLng(lat, lon));
+	}
+	
+}
+
+function gps(f)
+{
+	if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                success(position);
+            },
+            function(error) {
+                fail(error);
+            }, {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 10000
+            });
+    } else {
+        alert('No encontre soporte para geoubicación en su dispositivo...');
+        // no support for geolocation
+    }	
+}
+</script>
+
+</head>
+<body>
+
+<div class="section">
+	<div class="logo">
+	<a href="/MonitoreoBiomasaCarbono">
+	<img src="img/logo.png" alt="" class="logo">
+	</a>
+	</div>
+	<div class="logo">
+	<a href="http://www.minambiente.gov.co/">
+	<img src="img/img-min.png" alt="" class="logo">
+	</a>
+	</div>
+	<div class="logo">
+	<a href="http://wsp.presidencia.gov.co/portal/Paginas/default.aspx">
+	<img src="img/img-prosperidad.png" alt="" class="logo">
+	</a>
+	</div>
+	<div class="logo">
+	<a href="http://www.moore.org/">
+	<img src="img/img-moore.png" alt="" class="logo">
+	</a> 
+	</div>
+	<div class="logo">
+	<a href="http://www.patrimonionatural.org.co/">
+	<img src="img/img-patrimonio.png" alt="" class="logo">
+	</a>
+	</div>
+</div>
+
+
+<p class="titulo-derecho">
+Administración de Inventarios Forestales:
+</p>
+
+<h1>
+Detalle de Parcela
+</h1>
+
+<p class="confirmacion">Parcela guardada.</p>
+
+<h4>
+Visor..
+</h4>
+
+<div id="map" style="width: 100%; height: 400px"></div>
+
+<!--<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>-->
+
+<script type="text/javascript" src="js/leaflet.js"></script>
+
+<script type="text/javascript">
+
+
+var CX = '-74.8166568';
+var CY = '4.1904549';
+
+if (CX != '') {
+	dCX = CX * 1.0; 
+}
+else {
+	dCX = -73;
+}
+if (CY != '') {
+	dCY = CY * 1.0;
+}
+else {
+	dCY = 5; 
+}
+
+var map = L.map('map', {maxZoom:19, minZoom: 5}).setView([dCY, dCX], 18);
+
+var myAtribucion = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+'Imagery © <a href="http://mapbox.com">Mapbox</a>, ' +
+'Parcelas/Plots © <a href="http://www.ideam.gov.co">IDEAM</a> y/o Colaboradores'; 
+
+L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+	attribution: myAtribucion,
+	id: 'examples.map-i875mjb7'
+}).addTo(map);
+
+
+var str_viewparams = "";
+
+var PRCL_CONSECUTIVO = '5466';
+var w_PRCL_CONSECUTIVO = '';
+if (PRCL_CONSECUTIVO.length > 0) {
+	w_PRCL_CONSECUTIVO = " AND PRCL_CONSECUTIVO IN ("+PRCL_CONSECUTIVO+") ";
+	str_viewparams += 'w_PRCL_CONSECUTIVO:'+w_PRCL_CONSECUTIVO+';'; 
+}
+
+if (str_viewparams.length>0) {
+	str_viewparams = str_viewparams.slice(0,-1);
+	//document.getElementById('viewparams').innerHTML = 'Filtro actual:['+str_viewparams+']';
+}
+
+var parcelas = L.tileLayer.wms("http://54.172.131.5:8080/geoserver/OracleAmazon/wms", {
+    layers: 'OracleAmazon:C_RED_PARCELA_PARAMETRIZADA',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.0',
+	viewparams: str_viewparams, 
+    attribution: myAtribucion
+});
+parcelas.addTo(map);
+
+
+
+
+var latitud = '4.1904549'; 
+var longitud = '-74.8166568'; 
+
+jalon = L.icon({
+    iconUrl: 'mapas_parcelas/images/jalon-icon.png',
+    shadowUrl: 'mapas_parcelas/images/jalon-shadow.png',
+
+    //iconSize:     [20, 20], // size of the icon
+    //shadowSize:   [20, 20], // size of the shadow
+    iconAnchor:   [14, 40], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [10, 20],  // the same for the shadow
+    //popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+var popup = L.popup();
+
+map.doubleClickZoom.disable();
+
+
+function ponerVertice(e) {
+	establecerCoordenadasDesdeElMapa(e.latlng.lat, e.latlng.lng);
+}
+
+map.on('click', ponerVertice);
+
+
+var factor = 0.0000045;
+
+
+var bounds = [[dCY+(95*factor), dCX-(95*factor)], [dCY-(95*factor), dCX+(95*factor)]];
+L.rectangle(bounds, {color: "#bbbbbb", weight: 1}).addTo(map);
+
+var etiqueta_SPF1_BRINZAL = "";
+var etiqueta_SPF1_FUSTAL_GRANDE = "";
+var etiqueta_SPF1_FUSTAL = "";
+var etiqueta_SPF1_LATIZAL = "";
+
+var SPF1_BRINZAL = L.circle([dCY, dCX+(7.5*factor)], 1.5, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map).bindPopup(etiqueta_SPF1_BRINZAL);
+var SPF1_FUSTAL_GRANDE = L.circle([dCY, dCX], 15, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map).bindPopup(etiqueta_SPF1_FUSTAL_GRANDE);
+var SPF1_FUSTAL = L.circle([dCY, dCX], 7, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map).bindPopup(etiqueta_SPF1_FUSTAL);
+var SPF1_LATIZAL = L.circle([dCY, dCX], 3, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map).bindPopup(etiqueta_SPF1_LATIZAL);
+
+var SPF2_BRINZAL = L.circle([dCY+(80*factor), dCX+(7.5*factor)], 1.5, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF2_FUSTAL_GRANDE = L.circle([dCY+(80*factor), dCX], 15, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF2_FUSTAL = L.circle([dCY+(80*factor), dCX], 7, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF2_LATIZAL = L.circle([dCY+(80*factor), dCX], 3, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+
+var SPF3_BRINZAL = L.circle([dCY, dCX+(80*factor)+(7.5*factor)], 1.5, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF3_FUSTAL_GRANDE = L.circle([dCY, dCX+(80*factor)], 15, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF3_FUSTAL = L.circle([dCY, dCX+(80*factor)], 7, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF3_LATIZAL = L.circle([dCY, dCX+(80*factor)], 3, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+
+var SPF4_BRINZAL = L.circle([dCY-(80*factor), dCX+(7.5*factor)], 1.5, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF4_FUSTAL_GRANDE = L.circle([dCY-(80*factor), dCX], 15, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF4_FUSTAL = L.circle([dCY-(80*factor), dCX], 7, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF4_LATIZAL = L.circle([dCY-(80*factor), dCX], 3, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+
+var SPF5_BRINZAL = L.circle([dCY, dCX-(80*factor)+(7.5*factor)], 1.5, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF5_FUSTAL_GRANDE = L.circle([dCY, dCX-(80*factor)], 15, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF5_FUSTAL = L.circle([dCY, dCX-(80*factor)], 7, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+var SPF5_LATIZAL = L.circle([dCY, dCX-(80*factor)], 3, {color:'green',fillColor:'#008844',fillOpacity: 0.5,weight:1}).addTo(map);
+
+
+
+var usuario = '123'; 
+var idioma = 'es'; 
+var PRCL_CONSECUTIVO = '5466'; 
+
+</script>
+
+
+</body>
+</html>

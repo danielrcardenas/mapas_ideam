@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+#bloques>div {
+	width: 75% !important;
+}
+
+.block-vermas {
+	min-height: 100px !important;
+}
+
+#bloques-noticias-y-eventos>div {
+    width: 75% !important;
+    min-height: 100px !important;
+}
+
+#block-eventos {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+}
+
+#block-noticias {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+}
+
+.menu-ministerios {
+    width: 300px !important;
+}
+
+div.logos-y-login {
+    width: 100% !important;
+    float: none !important;
+}
+
+#block-top-menu {
+	float: none !important;
+    background: white !important;
+    width: 100% !important;
+    bottom: -2px !important;
+    display: inline-block !important;
+}
+
+#form-loguin-header .form-group {
+    margin: 0 !important;
+}
+
+#block-top-menu .form-actions, #postscript .form-actions {
+    float: right !important;
+}
+
+#block-top-menu .content .social-menu {
+    float: none !important;
+}
+
+img.logo-header {
+	width: 79px !important;
+}
+
+#form-loguin-header input {
+    max-width: 19px !important;
+}
+
+h2.titulo-vermas {
+    font-size: 1.2em !important;
+}
+
+#content-login-form {
+    /*float: right !important;*/
+    /*width: 68% !important;*/
+}

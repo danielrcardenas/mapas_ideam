@@ -1,0 +1,59 @@
+
+
+.yui-skin-sam .geometry-editor span.yui-toolbar-select
+{ 
+    width: 12em !important;
+} 
+
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-edit-geometry { 
+
+    width: 4em !important;
+    overflow: visible;
+} 
+
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-delete-geometry { 
+
+    width: 6em !important;
+    overflow: visible;
+} 
+
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-fit-geometry { 
+
+    width: 3em !important;
+    overflow: visible;
+} 
+
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-create-geometry { 
+
+    width: 6em !important;
+    overflow: visible;
+} 
+
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-group ul
+{
+    margin-left: 12px !important;
+    padding: 0px !important;
+}
+
+
+.yui-skin-sam .geometry-editor span.first-child a
+{
+    padding-left: 2px !important;
+}
+
+
+.yui-skin-sam .geometry-editor .yui-toolbar-container .yui-toolbar-subcont
+{
+    border: none !important;
+    padding: 0px !important;
+}

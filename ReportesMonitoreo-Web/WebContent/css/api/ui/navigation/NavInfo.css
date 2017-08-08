@@ -1,0 +1,36 @@
+
+
+.NavInfo {
+
+    background-color: #f7f3f7;        
+    text-align: center;
+}
+
+
+.NavInfo span.input-field-wrapper, .NavInfo span.select-field-wrapper {
+
+    margin: 6px;
+}
+
+
+.NavInfo span.label-wrapper {
+
+    font-size: 13px;
+    font-family: verdana, arial, sans-serif;
+    color: #747274;
+}
+
+
+.NavInfo span.input-field-wrapper input.invalid {
+
+    border: 1px solid red;
+}
+
+
+.NavInfo span.input-field-wrapper input, .NavInfo span.select-field-wrapper select {
+
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    border: 1px solid #848284;
+    margin: 2px;
+}

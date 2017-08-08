@@ -1,0 +1,600 @@
+
+
+
+div.layer-list div.header 
+{
+    line-height: 32px;
+    height: 20px;
+    font-weight: bold;
+    padding-right: 12px;
+    text-align: right;
+}
+
+
+div.layer-list ul
+{ 
+    margin-left: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+
+div.layer-list ul li
+{ 
+    list-style-type: none;      
+    position: relative;
+    height: 30px; 
+    /* display: block; */
+}
+
+
+div.layer-list ul li.layerListBoundary
+{ 
+    height: 7px;
+    width: 100%;
+    visibility: hidden;
+}
+
+
+div.layer-list div.header div.toggle-group {
+
+    width: 15px;
+    height: 15px;
+    float: right;
+}
+
+
+div.layer-list div.header div.expand-all {
+    
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0px -2300px;
+}
+
+
+div.layer-list div.header div.collapse-all {
+    
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0px -2325px;
+}
+
+
+div.layer-list ul li.container-opened
+{ 
+    height: 60px !important; /* 30 (extra div) + 30 (li)  */
+}
+
+
+div.layer-list ul li div.toggle-extra-container {
+
+    position: absolute;
+    right: 0px;
+    height: 24px;
+    width: 24px;
+    font-size: 0px;    
+    background-color: transparent;
+    background-image: url('../../../../../../images/tilapia-base-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0px -1000px;
+    cursor: pointer;
+}
+
+
+div.layer-list ul li.container-opened div.toggle-extra-container {
+
+    background-position: 0px -1050px !important;
+}
+
+div.extra-container-contents {
+	padding-left: 30px;
+}
+
+div.layer-list ul li div.extra-container {
+
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    top: 30px; /* 30px (li) */
+    background-image: url('../../../../../../third-party/yui/build/assets/skins/sam/sprite.png');
+    background-position: 0px 15px;
+}
+
+
+div.layer-list ul li.odd div.extra-container  {
+
+    background-position: 0px -1285px;
+}
+
+
+div.layer-list ul li.selected div.extra-container 
+{
+
+}
+
+
+div.layer-list ul li.container-opened div.extra-container {
+
+}
+
+
+div.layer-list ul li.container-closed div.extra-container {
+
+    visibility: hidden;
+}
+
+
+ul li.has-extra-container div.layerEntry div.actions
+{ 
+    right: 24px !important;
+}
+
+
+.layerEntry 
+{  
+    cursor: move;
+    padding: 0px;
+}
+
+
+.layerEntry .IEFix
+{ 
+    cursor: move;
+    width: 100%;
+    height: 100%;
+}
+
+
+.layerEntry img 
+{
+    width:20px;
+    height:20px;
+    float: left;
+    margin: 2px;
+}
+
+
+.layerEntry .title
+{ 
+    font-size: 11px;
+    font-weight:bold;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-bottom: 5px;
+    height:24px;
+    padding-left:10px;
+    padding-right:10px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+}
+
+
+.layerEntry .no-thumbnail
+{ 
+    left: 0px !important;
+}
+
+
+.layerEntry .title *
+{ 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.layerEntry .title .layerName 
+{
+    line-height : 24px;
+}
+
+
+.layerEntry .actions
+{ 
+    margin-bottom: 5px;
+    position: absolute;
+    right: 0px;
+    height: 24px;
+}
+
+
+.layerEntry .actions img
+{ 
+    cursor: pointer;
+}
+
+
+.layerEntry .closeBox
+{
+    font-size: 0px;
+    height: 0px;
+    clear: both;
+}
+
+
+.layerActionIcon
+{ 
+    margin: 3px;
+}
+
+
+.layerName
+{ 
+
+}
+
+
+.layerEntry .base
+{ 
+    font-weight: bold;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+}
+
+
+div.layer-list ul li.visUser 
+{ 
+    color: #4d90d2;  
+}
+
+
+div.layer-list ul li.invisUser 
+{ 
+    color: #bbb;
+}
+
+
+div.layer-list ul li.selected
+{ 
+    background-color: #ffe7b1 !important;
+}
+
+
+div.layer-list ul li.selected div.extra-container 
+{
+    background-image: url('../../../../../../images/tilapia-base-sprite.png') !important;
+    background-position: 0px 15px !important;
+    background-repeat: repeat-x !important;
+}
+
+
+
+div.layer-list ul li.deselected
+{ 
+
+}
+
+
+div.layer-list ul li.visScale
+{ 
+
+}
+
+
+div.layer-list ul li.invisScale
+{ 
+    font-style: italic;
+}
+
+
+.layerEntry .invisible 
+{ 
+    color: #e1e1e1;
+}
+
+
+.layerEntry .loaded
+{ 
+
+}
+
+
+.layerEntry .loading
+{ 
+    color: #33f;
+}
+
+
+.layerEntry .error
+{ 
+    color: #ff6060;
+}
+
+
+.layerOpacitySliderThumb
+{ 
+    background-image:url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0 -1750px;
+    width: 11px;
+    height: 20px;
+}
+
+
+.layerOpacitySliderBg
+{   
+    background-image:url(../../../../../../images/tilapia-base-sprite2.png);
+    background-position: -68px -37px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 20px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+
+/* When embedded in the extra-container, fix the margins and add the float! */
+div.layer-list ul li div.extra-container .layerOpacitySliderBg
+{   
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    float: left !important;
+    width: 100px !important;
+}
+
+
+.layerOpacitySliderWrapper
+{ 
+    position: absolute;
+    /* Was causing the "Layers disappear in IE" bug */
+    /*   text-align: center; */
+    background-color: white;
+    border: 1px solid #4d90d2;
+    z-index: 2000;
+}
+
+
+div.layer-list ul .yui-toolbar-container .yui-toolbar-icon  { 
+    background:url('../../../../../third-party/yui-assets/yui/build/assets/skins/sam/editor-sprite.gif') center center no-repeat !important; 
+    z-index: 10;
+} 
+
+
+div.layer-list ul .yui-toolbar-toggle-visibility span.yui-toolbar-icon { 
+
+    background:url('../../../../../images/LayerList/visible.gif') center center no-repeat !important;
+    left: 5px;
+} 
+
+
+div.layer-list ul .yui-button-selected span.first-child {
+
+    background:url('../../../../../third-party/yui-assets/yui/build/assets/skins/sam/sprite.png') repeat-x 0 -1700px;
+} 
+
+
+div.layer-list ul .yui-toolbar-container .yui-button-selected { 
+
+    background-repeat: repeat-x; 
+} 
+
+
+div.layer-list ul .layerActionIcon
+{ 
+    margin: 3px;
+    cursor: pointer;
+    float: left;
+}
+
+
+div.layer-list ul .actions div.enabled
+{ 
+
+}
+
+
+div.layer-list ul .actions div.disabled
+{ 
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+
+
+div.layer-list ul .even {
+
+}
+
+
+div.layer-list ul li.odd  {
+
+    background-color: #e7f2ff;
+}
+
+
+div.layer-list ul .layerActionIcon div 
+{
+    width: 20px;
+    height: 20px;
+}
+
+
+/**
+ * Layer action icons
+ */
+div.layer-list ul li div.layerActionIcon div 
+{
+    background-image:url(../../../../../../images/tilapia-base-sprite.png);
+}
+
+
+
+/***
+ * Visibility
+ */
+div.layer-list ul div.toggle-visibility {
+
+} 
+
+
+div.layer-list ul div.toggle-visibility div.user-visible-scale-visible 
+{
+    background-position: 0px -750px;
+} 
+
+
+div.layer-list ul div.toggle-visibility div.user-visible-scale-invisible 
+{
+    background-position: 0px -800px;
+} 
+
+
+div.layer-list ul div.toggle-visibility div.user-invisible-scale-visible 
+{
+    background-position: 0px -850px;
+} 
+
+
+div.layer-list ul div.toggle-visibility div.user-invisible-scale-invisible 
+{
+    background-position: 0px -900px;
+} 
+
+
+
+/***
+ * Fit
+ */
+div.layer-list ul div.fit-extent {
+
+}
+
+div.layer-list ul div.fit-extent div 
+{
+    background-position: 0px -1100px;
+} 
+
+
+
+/***
+ * Select layer
+ */
+div.layer-list ul div.select-layer {
+
+}
+
+
+div.layer-list ul div.select-layer div.selected
+{
+    background-position: 0px -1200px;
+} 
+
+
+div.layer-list ul div.select-layer div.deselected 
+{
+    background-position: 0px -1150px;
+} 
+
+
+
+/**
+ * Configure layer
+ */
+div.layer-list ul div.configure-layer 
+{
+
+}
+
+
+div.layer-list ul div.configure-layer div
+{
+    background-position: 0px -1250px;
+} 
+
+
+
+/***
+ * Show metadata
+ */
+div.layer-list ul div.show-metadata 
+{
+
+}
+
+div.layer-list ul div.show-metadata div
+{
+    background-position: 0px -1350px;
+}
+
+
+
+/***
+ * Remove layer
+ */
+div.layer-list ul div.remove-layer 
+{
+
+}
+
+div.layer-list ul div.remove-layer div
+{
+    background-position: 0px -1300px;
+}
+
+
+
+/***
+ * Opacity slider
+ */
+div.layer-list ul div.opacity-slider 
+{
+    
+}
+
+div.layer-list ul div.opacity-slider div
+{
+    background-position: 0px -1400px;
+}
+
+
+
+/***
+ * YUI Menu (used by the "select style" item for example)
+ */
+
+div.layer-list ul.yuimenubar ul {
+
+    margin:0;
+    padding:0;
+
+}
+
+div.layer-list ul.yuimenu ul {
+
+    border:solid 1px #c4c4be;
+    border-width:1px 0 0 0;
+    margin:0;
+    padding: 5px;
+
+}
+
+div.layer-list ul .yuimenuitem a {
+
+    text-decoration:none;
+}
+
+div.layer-list ul .yuimenuitem a.selected,
+.yuimenubaritem a.selected {
+
+    background-color:#8c8ad0;
+    color:#fff;
+
+}
+
+div.layer-list ul.yuimenubar li,
+.yuimenu li {
+
+    list-style-type: none;
+
+}
+
+div.layer-list ul.yuimenu {
+
+    background-color:#f6f7ee;
+    border:solid 1px #c4c4be;
+    padding:1px;
+
+}
+

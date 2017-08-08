@@ -1,0 +1,28 @@
+
+SPAN.options-button SPAN {
+        border:none  !important;
+}
+
+SPAN.options-button {
+        background : none !important;
+        border:none !important;
+}
+
+SPAN.options-button-enabled SPAN BUTTON 
+{
+
+    background-image:url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0 -1052px;
+    background-repeat: no-repeat;
+    text-indent: 10px;
+    overflow: hidden
+}
+
+SPAN.options-button-disabled SPAN BUTTON 
+{
+    background-image:url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 0 -950px;
+    background-repeat: no-repeat;
+    text-indent: 10px;
+    overflow: hidden
+}

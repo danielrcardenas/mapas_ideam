@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__prm_Periodo_98_0</property>
+            <property name="value">2005</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__prm_IdReporte_147_1</property>
+            <property name="value">1001</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__prm_DivisionNombre_283_2</property>
+            <property name="value">Consolidado Nacional</property>
+        </structure>
+        <structure>
+            <property name="name">prm_DivisionNombre_283_3</property>
+            <property name="value">Consolidado Nacional</property>
+        </structure>
+        <structure>
+            <property name="name">prm_DivisionNombre_283_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">prm_Periodo_98_4</property>
+            <property name="value">2005</property>
+        </structure>
+        <structure>
+            <property name="name">prm_Periodo_98_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">prm_IdReporte_147_5</property>
+            <property name="value">1001</property>
+        </structure>
+        <structure>
+            <property name="name">prm_IdReporte_147_type_</property>
+            <property name="value">integer</property>
+        </structure>
+    </list-property>
+</report>

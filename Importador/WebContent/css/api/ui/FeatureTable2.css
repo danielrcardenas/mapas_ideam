@@ -1,0 +1,13 @@
+
+.feature-table-2-action a 
+{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
+.feature-table-2 .yui-dt-col-GEOMETRY
+{
+    cursor: pointer;
+    color: blue;
+}

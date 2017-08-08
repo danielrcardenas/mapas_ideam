@@ -1,0 +1,25 @@
+
+
+/* Strongly inspired from: http://developer.yahoo.com/yui/examples/calendar/calcontainer.html (see the inline CSS) */
+.date-editor-calendar-wrapper:after
+{
+    content   : ".";
+    display   : block;
+    clear     : left;
+    height    : 0;
+    visibility: hidden;
+}
+
+
+.date-editor-calendar-wrapper 
+{    
+    padding:0em;
+}
+
+
+
+.date-editor .yui-push-button span.first-child
+{
+    background-image:url(../../../../../../images/tilapia-base-sprite.png);
+    background-position: 6px -1796px;
+}

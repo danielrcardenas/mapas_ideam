@@ -1,0 +1,119 @@
+@CHARSET "UTF-8";
+
+#mapa_wms {
+	width:100%;
+	height:500px;
+}
+
+body 
+{ 
+	margin: 10px; 
+	margin-top:10px; 
+	font-size: 100%;
+	background: #EEEEEE;
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+a { 
+	font-size:0.8em;
+}
+
+select {
+	width: 100%;
+}
+.select-wrapper
+{
+	box-shadow: inset 1px 1px 8px #D4D4D4;
+	width: 100%;
+}
+
+table { 
+	width: 100%; 
+}
+
+p { 
+	width: 99%; 
+	}
+p.opcionmenu { 
+	width: 100%; 
+	font-size: 1.4em; 
+	}
+
+div.section { 
+	width: 100%;
+}
+
+iframe {
+	min-height: 500px;
+	min-width: 300px;
+}
+
+*.iframe_subformulario_imagenes {
+	width: 100%;
+	height: 650px;
+	border: 1px solid #888;
+	border-radius: 10px;
+}
+
+*.iframe_subformulario_imagenes_etiquetas {
+	width: 100%;
+	/*height: 250px;*/
+	border: 1px solid #888;
+	border-radius: 10px;
+}
+
+*.iframe_subformulario_coordenadas {
+	width: 100%;
+	height: 800px;
+	border: 1px solid #888;
+}
+
+*.iframe_subformulario_carguemasivo {
+	width: 100%;
+	border: 1px solid #888;
+}
+
+*.iframe_subformulario_tallos {
+	width: 100%;
+	border: 1px solid #888;
+	border-radius: 10px;
+}
+
+*.iframe_subformulario_contactos {
+	width: 100%;
+	border: 1px solid #888;
+	border-radius: 10px;
+}
+
+*.iframe_visor_de_parcelas {
+	width: 100%;
+	height: 520px;
+	border: 1px solid white;
+}
+*.iframe_etiqueta_visor {
+	width: 450px; 
+	height: 200px;
+}
+
+div.logo {
+	height: 60px;
+}
+
+div.tabla_resultados {
+	width: 98%;
+}
+
+.mapa_parcelas {
+	width: 100%;
+	height: 500px;
+}
+
+.div_metadatos_etiqueta {
+	height: 300px;
+}
+
+.leaflet-popup-content, .leaflet-popup-content-wrapper {
+/*	max-height: 300px;*/
+}

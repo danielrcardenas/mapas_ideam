@@ -1,0 +1,294 @@
+
+div.object-inspector div.object-inspector-frame a,
+div.object-inspector div.object-inspector-frame a:visited {
+
+    color : blue;
+    text-decoration : none;
+}
+
+
+div.object-inspector div.object-inspector-frame div.paginator {
+
+    text-align: center;
+    position: relative;
+}
+
+
+div.object-inspector div.object-inspector-frame div.paginator span.first,
+div.object-inspector div.object-inspector-frame div.paginator span.prev,
+div.object-inspector div.object-inspector-frame div.paginator span.next,
+div.object-inspector div.object-inspector-frame div.paginator span.last {
+
+    margin: 6px;
+}
+
+
+div.object-inspector div.object-inspector-frame div.paginator span.page-indicator {
+
+    margin: 6px;
+}
+
+
+div.object-inspector div.object-inspector-frame div.paginator span.count-info {
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 2px;
+    font-style: italic;
+    /* 
+     * When font-style is italic, overflow must be set to auto 
+     * to prevent horizontal scroll-bar appearing under IE7.
+     */
+    overflow: auto; 
+    font-size: small;
+}
+
+
+div.object-inspector div.template {
+
+    padding: 6px;
+    border-bottom: 1px solid #e0e0ff;
+}
+
+
+div.object-inspector div.template .label {
+
+    font-weight: bold;
+    text-align: right;
+    padding-right: 6px;
+}
+
+
+div.object-inspector div.template .buttons,
+div.object-inspector div.template .actions {
+
+    padding-top: 12px;
+}
+
+
+div.object-inspector div.template .actions a.action {
+
+    color: black;
+    text-decoration: none !important;
+    background-image : url('../../../../../../third-party/yui/build/assets/skins/sam/sprite.png');
+    background-repeat : repeat-x;
+    background-position : 0 0;
+    white-space : nowrap;
+}
+
+
+div.object-inspector div.template .actions span span a.disabled,
+div.object-inspector div.template .actions span span a.disabled:active {
+
+    color: #808080 !important;
+    background-position : 0 0 !important;
+}
+
+
+div.object-inspector div.template .actions a.performed {
+
+    color: blue !important;
+    font-weight : bold !important;
+}
+
+
+div.object-inspector div.template .actions a.action:link {
+
+}
+
+
+div.object-inspector div.template .actions a.action:visited {
+
+}
+
+
+/* Careful: :active must come before :hover */
+div.object-inspector div.template .actions a.action:active {
+    
+    background-position : 0 -1700px !important;
+}
+
+
+div.object-inspector div.template .actions a.action:hover {
+    
+    background-position : 0 -1300px;
+}
+
+
+div.object-inspector div.template .actions a.action:focus {
+    
+    border: 0 !important;
+    outline: none;
+}
+
+
+div.object-inspector div.template .actions a.action::-moz-focus-inner {
+    
+    border: 0 !important;
+    outline: none;
+}
+
+
+
+/* Service template */
+
+div.object-inspector div.default-service-template tr.info-row td {
+
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+}
+
+
+
+/* Layer template */
+
+div.object-inspector div.dataset-template div.thumbnail-holder {
+
+    float: right;
+    margin-left: 12px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+div.object-inspector div.template div.thumbnail-holder img {
+
+    max-width: 100px;
+    max-height: 100px;
+    /* IE6-specific rules; will be ignored by other, well-behaving browsers */
+    width: expression(this.width > 100 ? 100: true);
+    height: expression(this.height > 100 ? 100: true);
+}
+
+
+div.object-inspector div.dataset-template div.additional-info-holder {
+
+    float: right;
+    text-align : right;
+}
+
+
+div.object-inspector div.dataset-template div.additional-info-holder span.info-entry {
+
+    display: block;
+    margin-top: 6px;
+}
+
+
+div.object-inspector div.dataset-template div.additional-info-holder a.extents {
+
+    text-decoration: none;
+}
+
+
+div.object-inspector div.dataset-template span.name {
+
+    font-weight: bold;
+    color: #0080b2;
+}
+
+
+div.object-inspector div.dataset-template table.info {
+
+    padding-left: 18px;
+}
+
+
+div.object-inspector div.dataset-template table.info span.abstract {
+
+    font-style: italic;
+}
+
+
+div.object-inspector div.eaim-dataset-template span.dataset-type-icon {
+
+    width: 15px;
+    height: 15px;
+}
+
+
+div.object-inspector div.eaim-dataset-template span.dataset-type-aggregate {
+
+    background-color : transparent;
+    background-image : url(../../../../../../images/tilapia-base-sprite.png);
+    background-repeat : no-repeat;
+    background-position : 0px -1700px;     
+}
+
+
+div.object-inspector div.eaim-dataset-template span.dataset-type-granule {
+
+    background-color : transparent;
+    background-image : url(../../../../../../images/tilapia-base-sprite.png);
+    background-repeat : no-repeat;
+    background-position : 0px -1725px;     
+}
+
+
+
+/* Generic item template */
+
+div.object-inspector div.genericitem-template div.thumbnail-holder {
+
+    float: right;
+    margin-left: 12px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+
+div.object-inspector div.genericitem-template div.additional-info-holder {
+
+    float: right;
+    text-align : right;
+}
+
+
+div.object-inspector div.genericitem-template div.additional-info-holder span.info-entry {
+
+    display: block;
+    margin-top: 6px;
+}
+
+
+div.object-inspector div.genericitem-template div.additional-info-holder a.extents {
+
+    text-decoration: none;
+}
+
+
+div.object-inspector div.genericitem-template span.name {
+
+    font-weight: bold;
+    color: #0080b2;
+}
+
+
+div.object-inspector div.genericitem-template table.info {
+
+    padding-left: 18px;
+}
+
+
+div.object-inspector div.genericitem-template table.info span.abstract {
+
+    font-style: italic;
+}
+
+
+div.object-inspector div.genericitem-template span.dataset-type-icon {
+
+    width: 15px;
+    height: 15px;
+}
+
+
+div.object-inspector table.feature-datasets-wrapper-template tbody tr {
+
+    white-space: pre;
+}

@@ -1,0 +1,9 @@
+CB<-function(x){
+  BA<-get(EQ1[as.integer(x[["EQ"]])])(as.numeric(x[["Dens..g.cm3."]]),
+  as.numeric(x[["D...cm."]]),
+  as.numeric(x[["Alt"]]),
+  as.numeric(x[["AB"]]))
+  return(BA)
+}
+DT1$BAKg<-apply(DT1,1,CB)
+print(DT1$BAKg)

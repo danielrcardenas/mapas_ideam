@@ -1,0 +1,19 @@
+
+
+.simple-text-hint {
+
+    background-color: #eff7ff;
+    z-index: 198;
+    border: 2px solid #868286;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+
+
+.simple-text-hint span {
+
+    margin: 6px;
+}
+

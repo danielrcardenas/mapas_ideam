@@ -1,0 +1,15 @@
+
+.yui-skin-sam div.dataset-iso19139-panel-frame {
+
+}
+
+
+.yui-skin-sam div.dataset-iso19139-panel-frame iframe {
+
+    frameborder : 0;
+    width : 600px;
+    height : 400px;
+    border : 0
+}
+
+

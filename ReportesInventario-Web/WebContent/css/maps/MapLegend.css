@@ -1,0 +1,14 @@
+
+.MapLegend {
+
+}
+
+
+.MapLegend .LayerLegend .Title {
+        font-weight: bold;
+        padding: 5px;
+}
+
+.MapLegend .LayerLegend img.LayerLegendImg {
+        padding: 5px;
+}

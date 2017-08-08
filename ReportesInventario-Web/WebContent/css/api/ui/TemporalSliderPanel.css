@@ -1,0 +1,56 @@
+
+.slider-bg {
+        position: relative;
+        background-image:url(../../../../../../images/tilapia-base-sprite2.png);
+        background-position: -200px 0;
+        background-repeat: no-repeat;
+        height:28px;
+        width:228px;
+}
+
+.slider-thumb {
+        position: absolute;
+        top : 14px; 
+        left : -5px;
+        width: 20px;
+        height: 21px;
+        background-image:url(../../../../../../images/tilapia-base-sprite.png);
+        background-position: 0 -2600px;
+        background-repeat: no-repeat;
+}
+
+span.temporal-slider-panel-options-button-enabled span {
+        border:none  !important;
+}
+
+span.temporal-slider-panel-options-button-enabled {
+        background : none !important;
+        border:none !important;
+}
+
+span.temporal-slider-panel-options-button-enabled span button {
+
+        background-image:url(../../../../../../images/tilapia-base-sprite.png);
+        background-position: 0 -1052px;
+        background-repeat: no-repeat;
+        text-indent: 10px;
+        overflow: hidden
+}
+
+span.temporal-slider-panel-options-button-disabled span {
+        border:none  !important;
+}
+
+span.temporal-slider-panel-options-button-disabled {
+        background : none !important;
+        border:none !important;
+}
+
+span.temporal-slider-panel-options-button-disabled span button {
+
+        background-image:url(../../../../../../images/tilapia-base-sprite.png);
+        background-position: 0 -950px;
+        background-repeat: no-repeat;
+        text-indent: 10px;
+        overflow: hidden
+}

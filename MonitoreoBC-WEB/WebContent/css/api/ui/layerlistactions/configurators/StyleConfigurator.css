@@ -1,0 +1,23 @@
+
+.configure-layer-popup .tab-view .style-configurator span.selected {
+
+        font-weight: bold;
+}
+
+
+.configure-layer-popup .tab-view .style-configurator {
+
+}
+
+
+.gmap-type {
+
+        border: 6px;
+}
+
+
+.gmap-current-type {
+
+        font-weight: bold;
+}
+

@@ -1,0 +1,13 @@
+
+div.symbolizer div.bd {
+
+    overflow: auto;
+    height: 400px;
+}
+
+
+div.symbolizer div.bd {
+    /* IE-only */
+    *width: 300px;
+}
+

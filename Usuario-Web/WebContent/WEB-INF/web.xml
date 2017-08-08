@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>Usuario-Web</display-name>
+	<!-- SERVLETS SERVICIO CAPTCHA -->
+	<servlet>
+		<servlet-name>stickyCaptchaServlet</servlet-name>
+		<servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>200</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>60</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>actualizarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.ActualizarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>recordarClaveUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.RecordarClaveUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>registrarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.RegistrarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>descargaLicenciaServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.DescargaLicenciaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.LimpiarSesionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>registrarAccesoServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.RegistrarAccesoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>consultarUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.ConsultarUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>activacionUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.ActivacionUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>modificarRolUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.ModificarRolUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>consultarEstadisticasUsuarioServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.ConsultarEstadisticasUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>descargaEstadisticasServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.DescargaEstadisticasServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>descargaDocumentosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.DescargaDocumentosServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.usuarios.servlets.BorrarArchivosServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>co.gov.ideamredd.ui.servlet.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>actualizarUsuarioServlet</servlet-name>
+		<url-pattern>/actualizarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>recordarClaveUsuarioServlet</servlet-name>
+		<url-pattern>/recordarClaveUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>registrarUsuarioServlet</servlet-name>
+		<url-pattern>/registrarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>descargaLicenciaServlet</servlet-name>
+		<url-pattern>/descargaLicenciaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>limpiarSesionServlet</servlet-name>
+		<url-pattern>/limpiarSesionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>registrarAccesoServlet</servlet-name>
+		<url-pattern>/registrarAccesoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>consultarUsuarioServlet</servlet-name>
+		<url-pattern>/consultarUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>activacionUsuarioServlet</servlet-name>
+		<url-pattern>/activacionUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>modificarRolUsuarioServlet</servlet-name>
+		<url-pattern>/modificarRolUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>consultarEstadisticasUsuarioServlet</servlet-name>
+		<url-pattern>/consultarEstadisticasUsuarioServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>descargaEstadisticasServlet</servlet-name>
+		<url-pattern>/descargaEstadisticasServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>descargaDocumentosServlet</servlet-name>
+		<url-pattern>/descargaDocumentosServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>borrarArchivosServlet</servlet-name>
+		<url-pattern>/borrarArchivosServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/idiomaServlet</url-pattern>
+	</servlet-mapping>
+	<!-- CAPTCHA -->
+	<servlet-mapping>
+		<servlet-name>stickyCaptchaServlet</servlet-name>
+		<url-pattern>/stickyCaptchaServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<!-- <welcome-file>index.html</welcome-file> -->
+		<!-- <welcome-file>index.htm</welcome-file> -->
+		<welcome-file>index.jsp</welcome-file>
+		<!-- <welcome-file>default.html</welcome-file> -->
+		<!-- <welcome-file>default.htm</welcome-file> -->
+		<!-- <welcome-file>default.jsp</welcome-file> -->
+	</welcome-file-list>
+	<!--#Security constraints -->
+	<!-- <security-constraint> -->
+	<!-- <web-resource-collection> -->
+	<!-- <web-resource-name>User Authentication -->
+	<!-- Policy -->
+	<!-- </web-resource-name> -->
+	<!-- <url-pattern>/pub/*</url-pattern> -->
+	<!-- </web-resource-collection> -->
+	<!-- <auth-constraint> -->
+	<!-- <role-name>*</role-name> -->
+	<!-- </auth-constraint> -->
+	<!-- </security-constraint> -->
+<!-- 	<security-constraint> -->
+<!-- 		<web-resource-collection> -->
+<!-- 			<web-resource-name>Registered User Authentication -->
+<!-- 				Policy</web-resource-name> -->
+<!-- 			<url-pattern>/reg/*</url-pattern> -->
+<!-- 		</web-resource-collection> -->
+<!-- 		<auth-constraint> -->
+<!-- 			<role-name>USUARIO_PUBLICO_REGISTRADO</role-name> -->
+<!-- 			<role-name>ADMINISTRADOR_TEMATICO</role-name> -->
+<!-- 			<role-name>COORDINADOR_TEMATICO_IDEAM</role-name> -->
+<!-- 			<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name> -->
+<!-- 			<role-name>Gestor_inventarios_forestales_IDEAM</role-name> -->
+<!-- 			<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name> -->
+<!-- 			<role-name>ADMINISTRADOR_GENERAL</role-name> -->
+<!-- 			<role-name>Coordinador_general_REDD</role-name> -->
+<!-- 		</auth-constraint> -->
+<!-- 	</security-constraint> -->
+<!-- 	<security-constraint> -->
+<!-- 		<web-resource-collection> -->
+<!-- 			<web-resource-name>Administrator Authentication -->
+<!-- 				Policy</web-resource-name> -->
+<!-- 			<url-pattern>/admin/*</url-pattern> -->
+<!-- 		</web-resource-collection> -->
+<!-- 		<auth-constraint> -->
+<!-- 			<role-name>ADMINISTRADOR_GENERAL</role-name> -->
+<!-- 		</auth-constraint> -->
+<!-- 	</security-constraint> -->
+	
+	<!--#Form-Based Authentication -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>Form-Based Authentication
+			Area</realm-name>
+		<form-login-config>
+			<form-login-page>/pub/homeFrames.jsp</form-login-page>
+			<form-error-page>/pub/error.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	<!--#Roles -->
+	<security-role>
+		<description>Usuario Publico</description>
+		<role-name>USUARIO_PUBLICO_REGISTRADO</role-name>
+	</security-role>
+	<security-role>
+		<description>Administrador Tematico</description>
+		<role-name>ADMINISTRADOR_TEMATICO</role-name>
+	</security-role>
+	<security-role>
+		<description>COORDINADOR_TEMATICO_IDEAM</description>
+		<role-name>COORDINADOR_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_TEMATICO_IDEAM</description>
+		<role-name>PROFESIONAL_TEMATICO_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>Gestor_inventarios_forestales_IDEAM</description>
+		<role-name>Gestor_inventarios_forestales_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>PROFESIONAL_CONSULTA_IDEAM</description>
+		<role-name>PROFESIONAL_CONSULTA_IDEAM</role-name>
+	</security-role>
+	<security-role>
+		<description>ADMINISTRADOR_GENERAL</description>
+		<role-name>ADMINISTRADOR_GENERAL</role-name>
+	</security-role>
+	<security-role>
+		<description>Coordinador_general_REDD</description>
+		<role-name>Coordinador_general_REDD</role-name>
+	</security-role>
+</web-app>
